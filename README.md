@@ -9,7 +9,6 @@ Sample project where an employee can create a leave request via chatbot from M
 
 ![Solution Architecture](./images/wf-outlook-integration.png)
 
-## Requirements
 
 ## Requirements
 
