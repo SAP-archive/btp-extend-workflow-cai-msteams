@@ -1,6 +1,6 @@
 # Triggering an SAP workflow from an SAP Conversational AI bot
 
-Extend the exercise with SAP workflow to SAP Conversational AI to learn how to create an SAP Conversational AI Bot and understand how to trigger SAP workflow from SAP Conversational AI bot. Lastly, integrate SAP Conversational AI with Azure bot and Microsoft Teams. 
+Extend the previous part with SAP workflow to SAP Conversational AI to learn how to create an SAP Conversational AI Bot and understand how to trigger SAP workflow from SAP Conversational AI bot. Lastly, integrate SAP Conversational AI with Azure bot and Microsoft Teams. 
 
 
 ## Step 1 - Create Leave Request Chatbot with SAP Conversational AI
@@ -56,7 +56,7 @@ Extend the exercise with SAP workflow to SAP Conversational AI to learn how to c
 
    * **Connect**: Ship your bot to one or several messaging platforms.
      
-     Here we integrate CAI bot with Microsoft Teams (See Step X or Unit 5)
+     Here we integrate CAI bot with Microsoft Teams 
 
    * **Monitor**: See how users are communicating with your bot, check if the bot is understanding users correctly, and make updates to the bots intents/entities. Monitoring also lets you see what your users want, and gives you ideas of what additional capabilities you could add to the bot.
 
@@ -208,4 +208,3 @@ Go to Workflow Management launchpad and open My Inbox application
 
 Congratulations! you successfully created leave request chatbot with SAP Conversational AI and integrated it with Workflow Management and Microsoft Teams.
 
-If you want to learn more how to build chatbots wiht SAP Conversational AI, please check following OpenSAP course: [How to Build Chatbots with SAP Conversational AI](https://open.sap.com/courses/cai1)

@@ -55,7 +55,7 @@ https://fa41fb92trial-dev-wfs-forms-adaptive-cards.cfapps.ap21.hana.ondemand.com
 
 ### 2.1. Open Business Application Studio
 
-### 2.2. In Unit 2 you already cloned the repository in your Business Application Studio Workspace. 
+### 2.2. In Part 2 you already cloned the repository in your Business Application Studio Workspace. 
 
 In case you didn't clone the repo, or removed your workspace, you can clone it once again
 
@@ -213,5 +213,5 @@ There are two approaches, to troubleshoot the application and adaptive cards, in
 
 # Summary
 
-Congratulations! you successfully completed the Unit 4. You learned how to transform workflow tasks into adaptive cards using the custom Java application and sent it to Microsoft Outlook.
+Congratulations! you successfully completed the Part 4. You learned how to transform workflow tasks into adaptive cards using the custom Java application and sent it to Microsoft Outlook.
 

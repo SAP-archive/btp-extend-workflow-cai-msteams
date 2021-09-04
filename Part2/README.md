@@ -1,6 +1,6 @@
 # SAP Workflow Management: create leave request workflow
 
-The objective of the exercise is to create leave request workflow, deploy and run it on BTP. Also understand the basic concepts how it works.
+The objective of this part is to create leave request workflow, deploy and run it on BTP. Also understand the basic concepts how it works.
 
 
 ## Step 1 - Business Application Studio getting started
@@ -9,7 +9,7 @@ The objective of the exercise is to create leave request workflow, deploy and ru
    
    ![BAS launch](./images/bas_launch.png)
 
-### 1.2. Run the Workflow Development space created in previous unit
+### 1.2. Run the Workflow Development space created in previous part
    
    ![Start WF Dev Space](./images/bas_start_space.png)
 
@@ -183,7 +183,7 @@ After successful deployment of leave request workflow we can see the deployment 
 
    ![WF new instance](./images/wf_new_instance.png)
 
-   >Note, later in upcoming Unit the leave request workflow will be triggered by API call from CAI chatbot
+   >Note, later in upcoming Part the leave request workflow will be triggered by API call from CAI chatbot
 
 ### 5.5. Go back to Workflow Management launchpad and open "Workflow Monitoring - Workflow Instances" tile
 

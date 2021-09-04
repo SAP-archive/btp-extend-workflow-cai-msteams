@@ -1,6 +1,6 @@
 # Setting up for Workflow Management on SAP Business Technology Platform
 
-In this unit you'll set up and configure the basic aspects of the SAP Workflow Management that you'll need to complete Week 3 of this course.   
+In this part you'll set up and configure the basic aspects of the SAP Workflow Management.  
 
 From a service perspective, you'll be using a number of services from the start:
 
@@ -48,7 +48,7 @@ As the booster completes, your subaccount will be ready to start building using 
    
    ![Workflow Roles](./images/workflowroles.png)
 
-### 1.6. In upcoming Units we will use workflow APIs and for that we need to add the required authorization scopes to the services instance. Using the "Instances and Subscriptions" menu item on the left, update the *wm_workflow* service instance by using the "Update" button and following the dialog flow, paying attention at each of the steps:
+### 1.6. In upcoming parts we will use workflow APIs and for that we need to add the required authorization scopes to the services instance. Using the "Instances and Subscriptions" menu item on the left, update the *wm_workflow* service instance by using the "Update" button and following the dialog flow, paying attention at each of the steps:
 
 ![Update WF Service instance](./images/wf_update_service_instance.png)
 
@@ -76,7 +76,7 @@ As the booster completes, your subaccount will be ready to start building using 
 
 ![Update WF Service instance](./images/wf_update_scopes.png)
 
-> The authorities you specified in the "Parameters" step will be needed in a later unit, when you come to call the Workflow API.
+> The authorities you specified in the "Parameters" step will be needed in a later part, when you come to call the Workflow API.
 
 
 ## Step 2 - Configure Business Application Studio for development
@@ -96,12 +96,12 @@ As the booster completes, your subaccount will be ready to start building using 
    
    ![Create Dev Space](./images/bas_new_space.png)
 
-### 2.4. After creation you can find newly defined and preconfigured development space with all required tools. In the next Unit we will use this space for building and deploying the workflow application. 
+### 2.4. After creation you can find newly defined and preconfigured development space with all required tools. In the next part we will use this space for building and deploying the workflow application. 
    
    ![BAS WF Dev Space](./images/bas_wf_space.png)
 
 ## Summary
 
 Good work!
-You successfully finished the setup and configuration of all necessary services and tools which is required for the Week 3 and you will use them in later Unites.
+You successfully finished the setup and configuration of all necessary services and tools which is required for the later steps.
 
