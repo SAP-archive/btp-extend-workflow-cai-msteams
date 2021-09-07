@@ -1,3 +1,5 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-extend-workflow-cai-msteams)](https://api.reuse.software/info/github.com/SAP-samples/btp-extend-workflow-cai-msteams)
+
 # Extend your business workflow with Microsoft Teams and Microsoft Outlook
 
 This repository contains code samples and step by step instructions 
