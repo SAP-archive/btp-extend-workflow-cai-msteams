@@ -1,58 +1,45 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-extend-workflow-cai-msteams)](https://api.reuse.software/info/github.com/SAP-samples/btp-extend-workflow-cai-msteams)
 
-# Extend your business workflow with Microsoft Teams and Microsoft Outlook
+# Extend your business workflow with Microsoft Teams and Outlook (Advance Scope)
 
 This repository contains code samples and step by step instructions 
 
+![Solution Architecture](-/../images/teams-sfsf.png)
+
 ## Description
-Extend productivity beyond SAP ecosystem using MS Teams and Outlook as engagement channels for workflows
 
-Sample project where an employee can create a leave request via chatbot from Microsoft Teams integrated with SAP Conversational AI which triggers an SAP Workflow. The manager of the employee can approve or reject the leave request via a My Inbox app or directly from Microsoft Outlook inbox via Microsoft actionable messages. As soon as the request is approved, a calendar entry will be created in the employee’s Microsoft Outlook triggered via Microsoft Graph APIs
+1. [Cloud Integration ](./Part1-CloudIntegration/README.md)
+   - Import Cloud Integration Flow
+   - Configure Cloud Integration Flows
 
-![Solution Architecture](./images/wf-outlook-integration.png)
+2. [API Management](./Part2-APIManagement/README.md)
+   - Create the API Endpoint
+   - Enable Actionable Messages (Adaptive Cards)
+   - Configure the Cloud Integration Flow
 
+3. [SuccessFactors](./Part3-SuccessFactors/README.md)
+   - Configure SuccessFactors - CI integration
+   - Dummy User requirements (matching mail address)
+   - OAuth Client configuration
 
-## Requirements
+4. [Conversational AI](./Part4-ConversationalAI/README.md)
+   - Create an account for SAP Conversational AI and get started
+   - Configure the Action to trigger Leave Request
+   - APPENDIX: Getting the correct Time Types for your test user
 
-The required systems and components are:
+5. [Microsoft Azure Bot](./Part5-MSAzureBot/README.md)
+   - Create Azure Bot instance
+   - Configure CAI - Azure integration
 
-- SAP Business Technology Platform trial or enterprise account
-- Microsoft Azure subscription
-- Microsoft 365 developer subscription​
+6. [Microsoft Teams App](./Part6-MSTeamsApp/README.md)
+   - Create Teams app manifest
 
-Entitlements/Quota required in your SAP Business Technology Platform Account:
-
-| Service                | Plan             | Nr. of instances |
-| ---------------------- | ---------------- | ---------------- |
-| Workflow Service       | lite   | 1       |
-| Workflow Management    | lite   | 1       |
-| Destination            | lite   | 1       |
-| Cloud Foundry runtime  | MEMORY | 1       |
-
-
-Subscriptions required in your SAP Business Technology Platform Account:
-
-| Subscription                    | Plan                      |
-| ------------------------------- | ------------------------- |
-| SAP Business Application Studio | trial or standard-edition |
-| Workflow Management             | saas-application          |
-
-
-## Setup and Configuration
-
-### [Part 1: Setting up for Workflow Management on SAP Business Technology Platform](./Part1/README.md)
-### [Part 2: SAP Workflow Management: create leave request workflow](./Part2/README.md)
-
-### [Part 3: Triggering an SAP workflow from an SAP Conversational AI bot](./Part3/README.md)
-
-### [Part 4: Sending adaptive cards from an SAP workflow](./Part4/README.md) 
-
-### [Part 5: Create calendar entry using Microsoft Graph](./Part5/README.md)
-
-
-## Further Information
-
-The scenario is based on a Blog Post: *[Integrating SAP Workflow Management with Microsoft Outlook](https://blogs.sap.com/2020/04/14/integrating-sap-cloud-platform-workflow-with-microsoft-outlook/)*  by [Harald Schubert](https://people.sap.com/harald.schubert) and is extended with SAP CAI, Microsoft Teams and Graph API capabilities.
+7. [Task Center](./Part6-MSTeamsApp/README.md)
+   - Create Task Center instance
+   - Configure TC - SuccessFactors integration
+   - Destination Configuration
+   - Simplified approach without IAS/IPS?!
+   - SCIM API for setting User UUID
 
 
 ## Known Issues
