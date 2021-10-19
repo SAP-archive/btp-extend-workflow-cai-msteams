@@ -1,47 +1,21 @@
 [![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/btp-extend-workflow-cai-msteams)](https://api.reuse.software/info/github.com/SAP-samples/btp-extend-workflow-cai-msteams)
 
-# Extend your business workflow with Microsoft Teams and Outlook (Advance Scope)
+# Extend your business workflow with Microsoft Teams and Outlook (Full Scope)
 
 This repository contains code samples and step by step instructions 
 
-![Solution Architecture](-/../images/teams-sfsf.png)
+![Solution Architecture](./images/Full%20Scope.png)
 
 ## Description
 
-1. [Cloud Integration ](./Part1-CloudIntegration/README.md)
-   - Import Cloud Integration Flow
-   - Configure Cloud Integration Flows
+The full scope scenario for the MS Teams integration with SAP SuccessFactors will contain the following additional main features:
 
-2. [API Management](./Part2-APIManagement/README.md)
-   - Create the API Endpoint
-   - Enable Actionable Messages (Adaptive Cards)
-   - Configure the Cloud Integration Flow
+- Native MS Teams app including interfaces for creating Leave Requests
+- Principal Propagation usage for the communication with SAP SuccessFactors
+- Leave Request notifications send from SuccessFactors to MS Teams including actions like Confirm or Decline
+- Guidance on how to extend this scenario with On-Premise system connections (e.g. S/4HANA) using Principal Propagation
 
-3. [SuccessFactors](./Part3-SuccessFactors/README.md)
-   - Configure SuccessFactors - CI integration
-   - Dummy User requirements (matching mail address)
-   - OAuth Client configuration
-
-4. [Conversational AI](./Part4-ConversationalAI/README.md)
-   - Create an account for SAP Conversational AI and get started
-   - Configure the Action to trigger Leave Request
-   - APPENDIX: Getting the correct Time Types for your test user
-
-5. [Microsoft Azure Bot](./Part5-MSAzureBot/README.md)
-   - Create Azure Bot instance
-   - Configure CAI - Azure integration
-
-6. [Microsoft Teams App](./Part6-MSTeamsApp/README.md)
-   - Create Teams app manifest
-
-7. [Task Center](./Part6-MSTeamsApp/README.md)
-   - Create Task Center instance
-   - Configure TC - SuccessFactors integration
-   - Destination Configuration
-   - Simplified approach without IAS/IPS?!
-   - SCIM API for setting User UUID
-
-
+Stay excited! Coming Soon ...
 ## Known Issues
 
 No known issues at this time
