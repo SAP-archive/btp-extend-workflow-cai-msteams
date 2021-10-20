@@ -1,6 +1,6 @@
 # Build Leave Request bot with SAP Conversational AI
 
-In this exercise, learn how to create an SAP Conversational AI Bot and understand how to trigger an SAP Cloud Integration instance from a SAP Conversational AI bot. 
+In this part, learn how to create an SAP Conversational AI Bot and understand how to trigger an SAP Cloud Integration instance from a SAP Conversational AI bot. 
 
 ## Step 1 - Create an account for SAP Conversational AI and get started
 
