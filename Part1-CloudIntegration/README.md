@@ -1,4 +1,4 @@
-# Setting up for Integration Suite on SAP Business Technology Platform
+# Setting up Cloud Integration
 
 SAP Cloud Integration will be the integration layer for the communication between SAP Conversational AI (integrated with Microsoft Teams) and SAP SuccessFactors to allow system-to-system interaction between both products. In this part of this mission, you will import the relevant integration flows into your Cloud Integration tenant. You can use these integration flows as provided (except of providing some configuration parameters before deployment).
 
