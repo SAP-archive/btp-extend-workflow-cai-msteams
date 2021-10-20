@@ -8,6 +8,10 @@ This repository contains code samples and step by step instructions
 
 ## Description
 
+The Objective of the advanced scope is similar to basic scope and the idea is to extend productivity beyond SAP ecosystem by using Microsoft Teams and Outlook as engagement channels. In advanced scope instead of using the custom Java application and SAP Workflow Management we are demonstrating how to connect SAP SuccessFactors System for requesting the leave by using Cloud Integration as an integration layer.
+
+This mission requires you to have access to a SuccessFactors system. This includes administrative privileges to define settings like OAuth clients or to assign test users the relevant privileges to access OData APIs. This mission was created based on a SuccessFactors Salesdemo environment instance. A productive landscape might differ in configuration options.
+
 1. [Cloud Integration ](./Part1-CloudIntegration/README.md)
    - Import Cloud Integration Flow
    - Configure Cloud Integration Flows
