@@ -4,7 +4,7 @@
 
 This repository contains code samples and step by step instructions 
 
-![Solution Architecture](-/../images/teams-sfsf.png)
+![Solution Architecture](-/../images/Advance%20Scope.png)
 
 ## Description
 
