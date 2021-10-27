@@ -1,6 +1,6 @@
 # Task Center
 
-**!Important!**
+**! Important !**
 
 The SAP Task Center service General Availability is planned for Q4/2021 (subject to change). This mission's primarily purpose is the demonstration of a working end-to-end scenario including the SAP Task Center service. Once the service is available, feel free to try this part of the mission yourself. 
 
@@ -8,7 +8,7 @@ Until then, you can already ensure, that you're fulfilling the prerequisites for
 
 Please be aware, that the main challenge of the SAP Task Center provisioning is not the subscription to SAP Task Center service itself, but the correct connectivity between IAS/IPS and your SAP applications like SAP SuccessFactors. This will probably consume most of your time and effort. 
 
-**!Important!**
+**! Important !**
 
 
 The new SAP Task Center service available in SAP Business Technology Platform, allows you to manage tasks of a user in a central place, integrating various LoB solutions like SAP S/4HANA Cloud, SAP SuccessFactors or SAP Ariba, as well as 3rd party task providers in the future (current state of planning - subject to change).
@@ -235,30 +235,31 @@ To check the SAP Task Center integration with SAP SuccessFactors, you now need t
 
 ![TaskCenter](./images/tc270.png)
 
-6.5 Open your **BTP Launchpad instance**, provisioned by the booster in step 1 of this documentation. You can access the Launchpad instance from your SAP BTP subaccount cockpit. Your Launchpad url could look similar to the following:
+6.5 Open your **SAP BTP Launchpad instance**, provisioned by the booster in step 1 of this documentation. You can access the Launchpad from your SAP BTP subaccount cockpit in the **Instances and Subscriptions** section. Your Launchpad url should look similar to the following:
 https://&lt;subaccount&gt;.launchpad.cfapps.&lt;region&gt;.hana.ondemand.com/site?siteId=3b3cdbd3-1234-5678-abcd-6ac28ff692d5#Shell-home
 
-6.5 Now login with your dedicated manager test user (in our case Caroline) using your IAS login. 
+6.5 Now login with your dedicated manager test user (in our case Caroline) using your SAP IAS login. 
 
 ![TaskCenter](./images/tc280.png)
 
-6.2 You should now see the Task Center and the Task Center Administration tile with the user context of Caroline.
+6.2 You should now see the **SAP Task Center** and the **SAP Task Center Administration** tiles with the user context of Caroline.
 
 ![TaskCenter](./images/tc290.png)
 
-6.3 Open the Task Center application to see the tasks which you created in SuccessFactors
+6.3 Open the SAP Task Center app to see the tasks which you created in SAP SuccessFactors
 
 ![TaskCenter](./images/tc230.png)
+
 
 ### APPENDIX
 
 ## Implementation without full scope IAS/IPS integration
 
-In case you don't have a full scope integration between IAS/IPS and your SAP SuccessFactors instance, you can also assign a user UUID manually to your corresponding SAP SuccessFactors users. As this approach was also used during the evaluation phase of the use case, we would like to share it with you. 
+In case you don't have a full scope integration between IAS/IPS and your SAP SuccessFactors instance, you can also assign a user UUID manually to your SAP SuccessFactors users. As this approach was also used during the evaluation phase of the use case, we would like to share it with you. 
 
-This might be suitable for a test system for which you e.g. have configured an integration between IAS and SAP SuccessFactors but you haven't configured IPS integration. Or in case you're facing issues when provisioning users between SAP SuccessFactors and IAS. 
+This concept might be suitable for a test system for which e.g. you have configured an integration between IAS and SAP SuccessFactors but you haven't configured IPS integration. Or in case you're facing issues when provisioning users between SAP SuccessFactors and IAS.
 
-Setting the required user UUID mapping for an SAP SuccessFactors user, can be done using the respective SCIM API and a user having the required authorizations to call it (e.g. SAP SuccessFactors admin user). 
+Setting the required user UUID mapping for an SAP SuccessFactors user, can be done manually by using the respective SCIM API and a user having the required authorizations to call it (e.g. SAP SuccessFactors admin user). 
 
 **! Important !**
 
@@ -276,7 +277,7 @@ e.g. https://apidemotenant.successfactors.com/rest/scim/Users?filter=userName eq
 
 ![TaskCenter](./images/tc310.png)
 
-7.2 Copy the user id (marked in red) of the previous response body and call another SCIM API endpoint to update the user UUID of this user. Please keep in mind, this can only be done once for a specific user (as of today)! Once set, the user UUID cannot be changed anymore. 
+7.2 Copy the user id (marked in red) of the previous response body and call another SCIM API endpoint to update the user UUID of this user. Please keep in mind, this can only be done once for a specific user (as of today)! Once set, the user UUID cannot be changed anymore. It is planned to change this behaviour in the future, so the user UUID can be updated whenever necessary within SAP SuccessFactors. 
 
 **PATCH**</br>
 https://&lt;SuccessFactors API endpoint&gt;.successfactors.com/rest/scim/Users/&lt;userid from step 7.2&gt; </br>
@@ -284,7 +285,7 @@ https://&lt;SuccessFactors API endpoint&gt;.successfactors.com/rest/scim/Users/5
 
 ![TaskCenter](./images/tc320.png)
 
-Provide the following request body including the respective UUID, which you can copy from the IAS user management. 
+Provide the following request body including the respective user uuid UUID, which you can copy from the IAS user management. 
 
 ```
 {

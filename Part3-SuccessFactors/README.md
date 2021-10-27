@@ -42,7 +42,7 @@ Follow Step 2 of the linked SAP Blog post, to create an OAuth2 client within SAP
 
 ## 4 Create a credential configuration in SAP Cloud Integration
 
-Follow step 3 of the linked SAP Blog post, to create the OAuth2 SAML Bearer credential configuration within your SAP  Cloud Integration instance. Give your credential configuration a meaningful and recognizable name (e.g. in our case SFSF_DC4 as we're connecting to an SAP SuccessFactors instance running in datacenter 4). The Token Service Url should be like the following format:
+Follow step 3 of the linked SAP Blog post, to create the OAuth2 SAML Bearer credential configuration within your SAP Cloud Integration instance. Give your credential configuration a meaningful and recognizable name (e.g. in our case SFSF_DC4 as we're connecting to an SAP SuccessFactors instance running in datacenter 4). The Token Service Url should be like the following format:
 
 https://<SuccessFactors API endpoint>/oauth/token
 

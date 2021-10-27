@@ -96,5 +96,5 @@ A sample manifest.json and two png files (icons for your app) can be found in th
 
 ![TeamsApp](./images/teams070.png) 
 
-3.3 The last two steps (3.1 and 3.2) can now also be performed by other user within your organization, to add the app to their Teams instance. 
+3.3 The last two steps (3.1 and 3.2) can now also be performed by other user within your organization, to add the app to their Microsoft Teams instance. 
 

@@ -8,23 +8,23 @@ This repository contains code samples and step by step instructions
 
 ## Description
 
-The Objective of the advanced scope is similar to basic scope and the idea is to extend productivity beyond SAP ecosystem by using Microsoft Teams and Outlook as engagement channels. In advanced scope instead of using the custom Java application and SAP Workflow Management we are demonstrating how to connect SAP SuccessFactors System for requesting the leave by using Cloud Integration as an integration layer.
+The Objective of the advanced scope is similar to basic scope and the idea is to extend productivity beyond SAP ecosystem by using Microsoft Teams and Microsoft Outlook as engagement channels. In advanced scope instead of using the custom Java application and SAP Workflow Management we are demonstrating how to connect SAP SuccessFactors system for requesting the time off by using SAP Cloud Integration as an integration layer.
 
-This mission requires you to have access to a SuccessFactors system. This includes administrative privileges to define settings like OAuth clients or to assign test users the relevant privileges to access OData APIs. This mission was created based on a SuccessFactors Salesdemo environment instance. A productive landscape might differ in configuration options.
+This mission requires you to have access to a SuccessFactors system. This includes administrative privileges to define settings like OAuth clients or to assign test users the relevant privileges to access OData APIs. This mission was created based on an SAP SuccessFactors Salesdemo environment instance. A productive landscape might differ in configuration options.
 
 1. [Cloud Integration ](./Part1-CloudIntegration/README.md)
-   - Import Cloud Integration Flow
-   - Configure Cloud Integration Flows
+   - Import the required Cloud Integration flows
+   - Configure the Cloud Integration flow
 
 2. [API Management](./Part2-APIManagement/README.md)
-   - Create the API Endpoint
+   - Create the required API Management endpoint
    - Enable Actionable Messages (Adaptive Cards)
-   - Configure the Cloud Integration Flow
+   - Configure the Cloud Integration flow
 
 3. [SuccessFactors](./Part3-SuccessFactors/README.md)
-   - Configure SuccessFactors - CI integration
-   - Dummy User requirements (matching mail address)
-   - OAuth Client configuration
+   - Configure the SAP SuccessFactors - SAP CI integration
+   - Apply dummy user requirements (matching mail address)
+   - Create the required OAuth client configurations
 
 4. [Conversational AI](./Part4-ConversationalAI/README.md)
    - Create an account for SAP Conversational AI and get started
@@ -32,19 +32,19 @@ This mission requires you to have access to a SuccessFactors system. This includ
    - APPENDIX: Getting the correct Time Types for your test user
 
 5. [Microsoft Azure Bot](./Part5-MSAzureBot/README.md)
-   - Create Azure Bot instance
-   - Configure CAI - Azure integration
+   - Create an Microsoft Azure Bot Channel instance
+   - Configure the Conversational AI - Microsoft Azure integration
 
 6. [Microsoft Teams App](./Part6-MSTeamsApp/README.md)
-   - Create Teams app manifest
+   - Create an Microsoft Teams app manifest definition
+   - Upload the manifest file to your Teams organization
 
 7. [Task Center](./Part6-MSTeamsApp/README.md)
-   - Create Task Center instance
-   - Configure TC - SuccessFactors integration
-   - Destination Configuration
-   - Simplified approach without IAS/IPS?!
-   - SCIM API for setting User UUID
+   - Create an SAP Task Center instance
+   - Configure SAP Task Center - SAP SuccessFactors integration
+   - Apply your SAP Task Center destination settings
 
+   - APPENDIX: Manual setting of the user UUID in SAP SuccessFactors
 
 ## Known Issues
 
