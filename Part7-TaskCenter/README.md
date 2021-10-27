@@ -242,8 +242,8 @@ https://subaccountabc.launchpad.cfapps.eu10.hana.ondemand.com/site?siteId=3b3cdb
 
 7.2 To add a User UUID to a SuccessFactors user, call the following SCIM API endpoint using Basic Authentication, to read the user id of a specific user. 
 
-**GET**
-https://<SuccessFactors API endpoint>.successfactors.com/rest/scim/Users?filter=userName eq '<SuccessFactors user name>' </br>
+**GET**</br>
+https://`<SuccessFactors API endpoint>`.successfactors.com/rest/scim/Users?filter=userName eq '&lt;SuccessFactors user name&gt;' </br>
 e.g. https://apidemotenant.successfactors.com/rest/scim/Users?filter=userName eq 'cbushell'
 
 ![TaskCenter](./images/tc300.png)
@@ -252,9 +252,9 @@ e.g. https://apidemotenant.successfactors.com/rest/scim/Users?filter=userName eq
 
 7.3 Copy the user id (marked in read) from the response body of the previous GET request and call another SCIM API endpoint to update the user UUID of this user. Please keep in mind, that this can (as of today), only be done once for a specific user! Once set, the user UUID cannot be changed anymore. 
 
-**PATCH**
-https://<SuccessFactors API endpoint>.successfactors.com/rest/scim/Users/<userid from step 7.2> </br>
-https://<SuccessFactors API endpoint>.successfactors.com/rest/scim/Users/574d38f0-a1b2-c3d4-e5f6-6302d9188c45
+**PATCH**</br>
+https://&lt;SuccessFactors API endpoint&gt;.successfactors.com/rest/scim/Users/<userid from step 7.2> </br>
+https://&lt;SuccessFactors API endpoint&gt;.successfactors.com/rest/scim/Users/574d38f0-a1b2-c3d4-e5f6-6302d9188c45
 
 ![TaskCenter](./images/tc320.png)
 
