@@ -5,7 +5,7 @@ By default all SAP Cloud Integration APIs which we prepared for this scenario ar
 
 ###  Step 1 - Create  the API Endpoint
 
-1.1. Open your SAP Integration Suite from BTP cockpit in section **Instances and Subscriptions**
+1.1. Open your SAP **Integration Suite** from BTP cockpit in section **Instances and Subscriptions**
 
 ![SFSF](./images/apimng011.png) 
 
@@ -25,11 +25,11 @@ By default all SAP Cloud Integration APIs which we prepared for this scenario ar
 
 ![SFSF](./images/apimng015.png) 
 
-1.6. Select "Cloud Integration" as a Type and provide the Cloud Integration Management Host
+1.6. Select "Cloud Integration" as a **Type** and provide the Cloud Integration Management Host
 
 ![SFSF](./images/apimng016.png) 
 
-1.7. To get the credentials for Cloud Integration go to BTP Cockpit and open **Instances and Subscriptions**
+1.7. To get the credentials for Cloud Integration go to SAP BTP Cockpit and open **Instances and Subscriptions**
 
 ![SFSF](./images/apimng017.png) 
 
@@ -41,7 +41,7 @@ By default all SAP Cloud Integration APIs which we prepared for this scenario ar
 
 ![SFSF](./images/apimng019.png) 
 
-1.10. Fill the **Cloud Integration Management Host**, **Client ID**, **Client Secret** using the values of previous step and **save** it
+1.10. Fill the **Cloud Integration Management Host**, **Client ID**, **Client Secret** using the values from previous step and **save** it
 
 ![SFSF](./images/apimng0110.png) 
 
@@ -58,11 +58,11 @@ By default all SAP Cloud Integration APIs which we prepared for this scenario ar
 
 Now the API for approving the leave request is successfully imported and deployed.
 
-1.14. Only little change is  needed to add the right credentials to the Policies. Open the **approveLeaveRequest** API
+1.14. Only minute changes are  needed to add the right credentials to the Policies. Open the **approveLeaveRequest** API
 
 ![SFSF](./images/apimng0114.png) 
 
-1.15. Open the **Policies**
+1.15. Open **Policies**
 
 ![SFSF](./images/apimng0115.png) 
 
@@ -183,7 +183,7 @@ https://ff149380trial-trial.integrationsuitetrial-apim.eu10.hana.ondemand.com/ff
 
 ![Save](./images/apimng0039.png)
 
-3.10. Deploy the iFlow by clicking "Deploy"
+3.10. Deploy the iFlow by clicking **Deploy**
 
 ![Deploy](./images/apimng0310.png)
 
@@ -196,7 +196,7 @@ https://ff149380trial-trial.integrationsuitetrial-apim.eu10.hana.ondemand.com/ff
 
 ![usercredential](./images/apimng0313.png)
 
-3.14. Provide the Name: **SMTP_SERVER** , user and password of the smtp server and press Deploy
+3.14. Provide the Name: **SMTP_SERVER** , user and password of the smtp server and press "Deploy"
 
 ![Deploy usercredential](./images/apimng0314.png)
 
