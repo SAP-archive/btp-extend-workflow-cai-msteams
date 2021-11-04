@@ -1,6 +1,6 @@
 # Azure Bot
 
-To be able to use your Conversational AI Bot within MS Teams, you will need a so called Bot Channel registration within Microsoft Azure. A channel is a connection between a communication application like MS Teams, Alexa or Slack and the actual bot. To create a new Bot Channel in your Azure Active Directory please follow the following steps.
+To be able to use your SAP Conversational AI Bot within MS Teams, you will need a so called Bot Channel registration within Microsoft Azure. A channel is a connection between a communication application like MS Teams, Alexa or Slack and the actual bot. To create a new Bot Channel in your Azure Active Directory please follow the following steps.
 
 - 1 Login to your MS Azure account
 - 2 Create an Azure Bot Channel
