@@ -2,8 +2,8 @@
 
 To make your Leave Request Bot available as a custom app within Microsoft Teams, you have to upload the required configuration information to your Microsoft Teams organization. This can be done within the Microsoft Teams client or from the Microsoft Teams admin interface. In this documentation, we will show you how to upload the app definition in your Microsoft Teams client. The process consists of three steps:
 
-1 Define your app's manifest file and relevant app icons
-2 Zip your app files and upload them to your Microsoft Teams organization
+1 Define your app's manifest file and relevant app icons\
+2 Zip your app files and upload them to your Microsoft Teams organization\
 3 Add the Microsoft Teams app to your user's Microsoft Teams instance
 
 ## 1 Define your app's manifest file and relevant app icons
@@ -80,7 +80,7 @@ A sample manifest.json and two png files (icons for your app) can be found in th
 
 2.4 Select your zip archive and confirm to upload the app to your Microsoft Teams organization. 
 
-2.5 Once the upload has finished, you can find you app in the section **Built for your org**. 
+2.5 Once the upload has finished, you can find your app in the section **Built for your org**. 
 
 ![TeamsApp](./images/teams040.png) 
 
