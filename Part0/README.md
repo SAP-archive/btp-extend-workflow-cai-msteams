@@ -2,7 +2,7 @@
 
 The objective of this part is to create a free Microsoft Azure subscription that you will use throughout this usecase for various tasks. 
 
-Additionally, you are going to add the Microsoft365 Dveloper account as an administrator to the Azure subscription. With the Microsoft365 Developer Account you have access to Microsoft Teams but to use the Microsoft Bot channel (that's coming with the Azure trial subscription) a Azure subscription is necessary. 
+Additionally, you are going to add the Microsoft365 Developer account as an administrator to the Azure subscription. With the Microsoft365 Developer Account you have access to Microsoft Teams but to use the Microsoft Bot channel (that's coming with the Azure trial subscription) a Azure subscription is necessary. 
 
 **Do not use your corporate email address for this usecase, as you may have limited permissions in the associated Subscription or Azure Active Directory Tenant.**
 
