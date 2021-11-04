@@ -20,7 +20,7 @@ To make use of the SAP Task Center service within this Leave Request scenario, s
 - 3 Configuration of SAP Task Center settings on SAP SuccessFactors side
 - 4 Configuration of SAP Task Center destinations in the SAP Business Technology Platform
 - 5 Enable the Push of Tasks from SAP SuccessFactors to SAP Task Center
-- 6 Check your integration of Task Center and SAP SuccessFactors</br>
+- 6 Check your integration of SAP Task Center and SAP SuccessFactors</br>
 
 APPENDIX
 - Implementation without full scope IAS/IPS integration
@@ -41,9 +41,9 @@ The following simplified architecture describes the process of how  SAP Task Cen
 
 ![TaskCenter](./images/tc010.png)
 
-As of today, **in case of SAP SuccessFactors** the integration starts from the application itself. Let's assume a new employee called **Manager** is created in SAP SuccessFactors. Once persisted in the database, IPS will fetch the users  from SAP SuccessFactors on a regular basis. In this case, the **Manager** will be imported into the IAS, which is the target system of the **IPS import process**. Once the user is created, an user UUID is automatically created by IAS. An automated process now ensures, that this user UUID is propagated back to SAP SuccessFactors. So after this process, the **Manager** user is know to SAP SuccessFactors and IAS by the same unique identifier. 
+As of today, **in case of SAP SuccessFactors** the integration starts from the application itself. Let's assume a new employee called **Manager** is created in SAP SuccessFactors. Once persisted in the database, IPS will fetch the users  from SAP SuccessFactors on a regular basis. In this case, the **Manager** will be imported into the IAS, which is the target system of the **IPS import process**. Once the user is created, an user UUID is automatically created by IAS. An automated process now ensures, that this user UUID is propagated back to SAP SuccessFactors. So after this process, the **Manager** user is known to SAP SuccessFactors and IAS by the same unique identifier. 
 
-> Hint: As of today, this is a special behaviour in case of SAP SuccessFactors. For other applications, the users incl their UUIDs can be created right away in IAS and provisioned to the target system using IPS. In case of SAP SuccessFactors, the users need to come from the application itself. This requirement might change in the future, so you can also provision users including their UUIDs into SAP SuccessFactors which didn't exist before. Please check the appendix, in case you're facing issues while implementing the IPS integration with SAP SuccessFactors. 
+> Hint: As of today, this is a special behaviour in case of SAP SuccessFactors. For other applications, the users incl. their UUIDs can be created right away in IAS and provisioned to the target system using IPS. In case of SAP SuccessFactors, the users need to come from the application itself. This requirement might change in the future, so you can also provision users including their UUIDs into SAP SuccessFactors which didn't exist before. Please check the appendix, in case you're facing issues while implementing the IPS integration with SAP SuccessFactors. 
 
 After the SAP Task Center service has been successfully configured within SAP BTP, SAP SuccessFactors will push latest task updates in a regular basis to SAP BTP. Beside the task content, SAP SuccessFactors also sends an information about the target recipient of the task. In this case the **Manager** user, who is identified by his unique user UUID. </br>
 
@@ -78,12 +78,12 @@ https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Publ
 
 ## 2 Integration between SAP SuccessFactors and your custom IAS/IPS instance
 
-Your SAP SuccessFactors instance must have an integration with the same IAS/IPS instance which you've configured as Trusted Identity Provider within your BTP subaccount (see requirement in step 1)! The integration configuration between SAP SuccessFactors and your custom IAS/IPS instance is not trivial and also not scope of this mission. We assume, that you've already configured this integration successfully before you continue with the next steops. If not, we strongly recommend, going through the following documentations and KBA to get an idea of the whole process.
+Your SAP SuccessFactors instance must have an integration with the same IAS/IPS instance which you've configured as Trusted Identity Provider within your BTP subaccount (see requirement in step 1)! The integration configuration between SAP SuccessFactors and your custom IAS/IPS instance is not trivial and also not scope of this mission. We assume, that you've already configured this integration successfully before you continue with the next steps. If not, we strongly recommend, going through the following documentations and KBA to get an idea of the whole process.
 
 [SAP Help] Setting Up SAP SuccessFactors with Identity Authentication and Identity Provisioning Services
 https://help.sap.com/viewer/568fdf1f14f14fd089a3cd15194d19cc/2105/en-US/fb069584363a4df08aad42315cebdd6d.html 
 
-[KBA] Integrating SuccessFactors with Identity Authentication
+[KBA] Integrating SAP SuccessFactors with Identity Authentication
 https://userapps.support.sap.com/sap/support/knowledge/en/2791410 
 
 Some SAP SuccessFactors instances come with a preconfigured IAS/IPS integration. If you want to make use of these instances, make sure you're also using them in your SAP BTP subaccount. If you want to use a custom IAS/IPS instance, please exchange it in your SAP SuccessFactors landscape in this case!
@@ -93,7 +93,7 @@ Some SAP SuccessFactors instances come with a preconfigured IAS/IPS integration.
 ## 3 Configuration of SAP Task Center settings on SAP SuccessFactors side
 The SAP Task Center configuration for SAP SuccessFactors is well described in the following SAP Help documentation. Please be aware, that the documentation is linking to some sub-sites, which need to be read carefully and which you need to processed before you continue with the main documentation. 
 
-[SAP Help] Task Center - SuccessFactors Integration </br>
+[SAP Help] SAP Task Center - SAP SuccessFactors Integration </br>
 https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
 
 As described in the documentation, you should stick to the following steps:
@@ -116,7 +116,7 @@ https://help.sap.com/viewer/568480cc877d4337992a2cd9792fbfed/2105/en-US/c15f23f6
 https://help.sap.com/viewer/568480cc877d4337992a2cd9792fbfed/2105/en-US/c15f23f6f4e24ddea84d5be8e6b935ae.html 
 
 
-3.4 Download the Trust Certificate from the SAP BTP subaccount which you used for the SAP Task Center provisioning. To get your Trust Certificate (which is required to configure the respective OAuth Clients within SuccessFactors) please follow the procedure described on the following SAP Help site:
+3.4 Download the Trust Certificate from the SAP BTP subaccount which you used for the SAP Task Center provisioning. To get your Trust Certificate (which is required to configure the respective OAuth Clients within SAP SuccessFactors) please follow the procedure described on the following SAP Help site:
 
 https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
 
@@ -160,7 +160,7 @@ Copy the API Key of this OAuth Client, once you saved it by clicking on **View**
 
 The SAP Task Center service communicates with your SAP applications like SAP SuccessFactors by using the SAP Connectivity Service. Therefor you need to configure respective destinations within your SAP BTP subaccount, which is hosting your SAP Task Center instance. 
 
-4.1 To create the required destinations in your BTP subaccount, you need to create a new Service Key for your SAP Task Center instance as client credentials need to be provided in the destination. Therefor please go the **Instances and Subscriptions** section of your subaccount and create a new service key for your SAP Task Center service. Give it a unique name and click on **Create**.
+4.1 To create the required destinations in your SAP BTP subaccount, you need to create a new Service Key for your SAP Task Center instance as client credentials need to be provided in the destination. Therefor please go the **Instances and Subscriptions** section of your subaccount and create a new service key for your SAP Task Center service. Give it a unique name and click on **Create**.
 
 ![TaskCenter](./images/tc110.png)
 
@@ -267,7 +267,7 @@ This process is **NOT** intended for a productive landscape, as the user UUID ca
 
 **! Important !**
 
-7.1 To add an user UUID to a SuccessFactors user, call the following SCIM API endpoint using Basic Authentication, to read the user id of a specific SAP SuccessFactors user. 
+7.1 To add an user UUID to a SAP SuccessFactors user, call the following SCIM API endpoint using Basic Authentication, to read the user id of a specific SAP SuccessFactors user. 
 
 **GET**</br>
 https://&lt;SuccessFactors API endpoint&gt;.successfactors.com/rest/scim/Users?filter=userName eq '&lt;SuccessFactors user name&gt;' </br>
