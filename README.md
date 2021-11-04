@@ -40,6 +40,8 @@ Subscriptions required in your SAP Business Technology Platform Account:
 
 ## Setup and Configuration
 
+### [Part 0: Setup Free Microsoft Azure and Microsoft365 Developer Account ](./Part0/README.md)
+
 ### [Part 1: Setting up for Workflow Management on SAP Business Technology Platform](./Part1/README.md)
 ### [Part 2: SAP Workflow Management: create leave request workflow](./Part2/README.md)
 
