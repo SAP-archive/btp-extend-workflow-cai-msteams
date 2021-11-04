@@ -1,7 +1,7 @@
 # Setting up SAP API Management & Enable Actionable Messages
 
 In this part we are going to register the Approval Endpoint (from SAP Cloud Integration) from previous part, to expose it for a usage from Adaptive Card on Microsoft Outlook.
-By default all SAP Cloud Integration APIs which we prepared for this scenario are secured, that's why in API Management we are going to apply **policies** to them and expose without any client credentials and allowing access by providing the UUID of the workflow to approve or reject the request. This is required to trigger the API from Adaptive Card on Microsoft Outlook. 
+By default all SAP Cloud Integration APIs which we prepared for this scenario are secured, that's why in SAP API Management we are going to apply **policies** to them and expose without any client credentials and allowing access by providing the UUID of the workflow to approve or reject the request. This is required to trigger the API from Adaptive Card on Microsoft Outlook. 
 
 ###  Step 1 - Create  the API Endpoint
 
@@ -189,10 +189,10 @@ https://ff149380trial-trial.integrationsuitetrial-apim.eu10.hana.ondemand.com/ff
 
 3.11. As as final step you need to configure the Credentials of your SMTP Server  
 
-3.12. Go to **Monitor** and open the **Security Material** in Cloud Integration Cockpit
+3.12. Go to **Monitor** and open the **Security Material** in SAP Cloud Integration Cockpit
 ![Keystore](./images/apimng0312.png)
 
-3.13. Create new **User Credential**
+3.13. **Create** new **User Credential**
 
 ![usercredential](./images/apimng0313.png)
 
