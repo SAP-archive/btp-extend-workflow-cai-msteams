@@ -64,7 +64,7 @@ In this step you'll register for the SAP Conversational AI Community Edition and
 
    * **Connect**: Ship your bot to one or several messaging platforms.
      
-     Here we integrate CAI bot with Microsoft Teams (next Part)
+     Here we integrate ConversationalAI bot with Microsoft Teams (next Part)
 
    * **Monitor**: See how users are communicating with your bot, check if the bot is understanding users correctly, and make updates to the bots intents/entities. Monitoring also lets you see what your users want, and gives you ideas of what additional capabilities you could add to the bot.
 
@@ -130,7 +130,7 @@ You have now configured the bot in a way that it triggers a cloud integration fl
 
 When handling employee times in SAP SuccessFactors, an employee typically has assigned multiple so called Time Types (like Sick Leave, Vacation, Jury Duty or many more). These Time Types might vary from country to country (e.g. GBR-SICK, DEU-SICK, BRA-SICK), so the list of available Time Types in a SuccessFactors system can grow huge! Some of the Time Types may also have balance restrictions, like for vacation, where a user can only request a certain amount of hours for this Time Type. 
 
-2.12. Use the Time Types of your Test User to further train the CAI Bot, by adding additional Requirements and Intents:
+2.12. Use the Time Types of your Test User to further train the CoversationalAI Bot, by adding additional Requirements and Intents:
 
 ![Add Requirements](./images/cai_add_requiroments.png)
 
