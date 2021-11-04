@@ -39,7 +39,7 @@ This mission requires you to have access to a SAP SuccessFactors system. This in
    - Create an Microsoft Teams app manifest definition
    - Upload the manifest file to your Teams organization
 
-7. [SAP Task Center](./Part6-MSTeamsApp/README.md)
+7. [SAP Task Center](./Part7-TaskCenter/README.md)
    - Create an SAP Task Center instance
    - Configure SAP Task Center - SAP SuccessFactors integration
    - Apply your SAP Task Center destination settings
