@@ -1,6 +1,6 @@
 # Build Leave Request bot with SAP Conversational AI
 
-In this part, learn how to create an SAP Conversational AI Bot and understand how to trigger an SAP Cloud Integration instance from a SAP Conversational AI bot. 
+In this part,you learn how to create an SAP Conversational AI Bot and understand how to trigger an SAP Cloud Integration instance from a SAP Conversational AI bot. 
 
 ## Step 1 - Create an account for SAP Conversational AI and get started
 
@@ -48,7 +48,7 @@ In this step you'll register for the SAP Conversational AI Community Edition and
 
      ![CAI Intends](./images/cai_intends.png)
 
-     For LeaveRequest bot we defined 3 intends: leave-request, greetings, goodbye
+     For LeaveRequest bot we defined 3 intents: leave-request, greetings, goodbye
 
    * **Build**: Create your conversational flow with Bot Builder tool. Here you give your bot skills it can perform.
 
@@ -70,7 +70,7 @@ In this step you'll register for the SAP Conversational AI Community Edition and
 
 ## Step 2 - Configure the Action to trigger Leave Request 
 
-Let's adjust the forked bot to your needs and connect it to your instance of SAP Cloud Integration which will make the SuccessFactors API call.
+Let's adjust the forked bot to your needs and connect it to your instance of SAP Cloud Integration which will make the SAP SuccessFactors API call.
 
 ---
 
@@ -101,7 +101,7 @@ Let's adjust the forked bot to your needs and connect it to your instance of SAP
 
    ![CAI WF credentials](./images/cai_wf_credentials_1.png)
 
-2.5 Go back to the SAP Conversational AI tab. Find the **API Service Configuration** and edit it.
+2.5 Go back to the SAP Conversational AI tab. Find the **API Service Configuration** and **edit** it.
    
    ![CAI API config](./images/cai_api_edit.png)
 
@@ -128,7 +128,7 @@ You have now configured the bot in a way that it triggers a cloud integration fl
 
 >NOTE: The bot is trained to support following Time Types from SuccessFactors System: **Annual Leave (GBR-ANNL, DEU-ANNL)**, **Sick Leave (GBR-SICK, DEU-SICK)**, **Maternity Leave (DEU-MAT)**. For all further Time Types please train the bot accordingly.
 
-When handling employee times in SuccessFactors, an employee typically has assigned multiple so called Time Types (like Sick Leave, Vacation, Jury Duty or many more). These Time Types might vary from country to country (e.g. GBR-SICK, DEU-SICK, BRA-SICK), so the list of available Time Types in a SuccessFactors system can grow huge! Some of the Time Types my also have balance restrictions, like for vacation, where a user can only request a certain amount of hours for this Time Type. 
+When handling employee times in SAP SuccessFactors, an employee typically has assigned multiple so called Time Types (like Sick Leave, Vacation, Jury Duty or many more). These Time Types might vary from country to country (e.g. GBR-SICK, DEU-SICK, BRA-SICK), so the list of available Time Types in a SuccessFactors system can grow huge! Some of the Time Types may also have balance restrictions, like for vacation, where a user can only request a certain amount of hours for this Time Type. 
 
 2.12. Use the Time Types of your Test User to further train the CAI Bot, by adding additional Requirements and Intents:
 
@@ -141,10 +141,10 @@ Please check the APPENDIX to see how to find the Time Types.
 ## Getting the correct Time Types for your test user
 
 
-As of today there is no public SuccessFactors API available, allowing to retrieve the TimeTypes and respective balances of a SuccessFactors user. Such an API might follow in one of the future SuccessFactors releases. Until a potential implementation of such an API is available, please identify the relevant Time Types for your test user by getting the relevant information from the SuccessFactors system yourself. To do so, please follow the steps below:
+As of today there is no public SAP SuccessFactors API available, allowing to retrieve the TimeTypes and respective balances of a SAP SuccessFactors user. Such an API might follow in one of the future SAP SuccessFactors releases. Until a potential implementation of such an API is available, please identify the relevant Time Types for your test user by getting the relevant information from the SAP SuccessFactors system yourself. To do so, please follow the steps below:
 
 
-1 Get the test user's Time Types and Balances
+1 Get the test user's Time Types and Balances\
 2 Get the relevant Time Type Id
 
 ## 1 Get the test user's Time Types and Balances
