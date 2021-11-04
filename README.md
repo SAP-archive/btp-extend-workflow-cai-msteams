@@ -12,7 +12,7 @@ The full scope scenario for the MS Teams integration with SAP SuccessFactors wil
 
 - Native MS Teams app including interfaces for creating Leave Requests
 - Principal Propagation usage for the communication with SAP SuccessFactors
-- Leave Request notifications send from SuccessFactors to MS Teams including actions like Confirm or Decline
+- Leave Request notifications send from SAP SuccessFactors to MS Teams including actions like *Confirm or Decline*
 - Guidance on how to extend this scenario with On-Premise system connections (e.g. S/4HANA) using Principal Propagation
 
 Stay excited! Coming Soon ...
