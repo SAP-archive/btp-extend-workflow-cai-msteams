@@ -6,7 +6,7 @@ As SAP Cloud Integration will be the integration layer for the communication bet
 2 Create a Key-Pair in SAP Cloud Integration\
 3 Create an OAuth2 client in SAP SuccessFactors\
 4 Create the credential configuration in SAP Cloud Integration\
-5 Replace the credential configuration in your integration flows\
+5 Replace the credential configuration in your integration flows
 
 This part of the mission is based on the following SAP Blog post published in March 2021. It describes in a comprehensive way, how the OAuth2 SAML Bearer authentication can be implemented with a fixed user.
 
