@@ -53,9 +53,9 @@ https://fa41fb92trial-dev-wfs-forms-adaptive-cards.cfapps.ap21.hana.ondemand.com
 
 ## Step 2 - Update and deploy the Adaptive Card Sender App
 
-### 2.1. Open Business Application Studio
+### 2.1. Open SAP Business Application Studio
 
-### 2.2. In Part 2 you already cloned the repository in your Business Application Studio Workspace. 
+### 2.2. In Part 2 you already cloned the repository in your SAP Business Application Studio Workspace. 
 
 In case you didn't clone the repo, or removed your workspace, you can clone it once again
 
@@ -112,7 +112,7 @@ Update following properties:
 
  ### 2.6. Before deploying the application, create destination service instance
 
-* Open a new **Terminal** and login in your BTP CF account using your credentials
+* Open a new **Terminal** and login in your SAP BTP CF account using your credentials
   
     ```bash/Shell
     cf login
@@ -144,7 +144,7 @@ cf push
 
 ![Deploy](./images/u4_cf_push.png)
 
-### 2.9. Download the Destination file **bpmworkflowruntime_mail** and import in BTP Cockpit to setup mail server information used from workflow service
+### 2.9. Download the Destination file **bpmworkflowruntime_mail** and import in SAP BTP Cockpit to setup mail server information used from workflow service
 
 * Download the destination file
     ```
