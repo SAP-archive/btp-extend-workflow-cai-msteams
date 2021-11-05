@@ -15,15 +15,15 @@ To accelerate the setup process, BTP offers **Boosters** concept which will help
 
 In a Booster Catalog you can find booster **"Set up account for Workflow Management"** which helps you to set up a development environment where you can work with SAP Workflow Management service in your SAP BTP account.
 
-This guided set of automated steps will configure entitlements of workflow management services, subscribe to the workflow management application, create a service instance for: workflow management, workflow, create needed destinations, and assign all needed roles to your user. In the background, the booster will also automatically enable Cloud Foundry and create default space, if not done already. Business 
+This guided set of automated steps will configure entitlements of workflow management services, subscribe to the workflow management application, create a service instance for: workflow management, workflow, create needed destinations, and assign all needed roles to your user. In the background, the booster will also automatically enable Cloud Foundry and create default space, if not done already.
 
-As the booster completes, your subaccount will be ready to start building using SAP Workflow Management. You'll have appropriate authorizations set up and assigned to your user, an Business Application Studio (IDE) setup and configured to work with Workflow artifacts, and an instance of the main Workflow service set up explicitly.
+As the booster completes, your subaccount will be ready to start building using SAP Workflow Management. You'll have appropriate authorizations set up and assigned to your user, an SAP Business Application Studio (IDE) setup and configured to work with Workflow artifacts, and an instance of the main Workflow service set up explicitly.
    
-### 1.1.  Go to your SAP BTP trial account and go to **Boosters** section. Find the **"Set up account for Workflow Management"** booster and open it.
+### 1.1.  Go to your SAP BTP trial account and go to *Boosters* section. Find the *"Set up account for Workflow Management"* booster and open it.
 
 ![Boosters](./images/boosterstart.png)
 
-### 1.2. Get overview which Services and Subscriptions are part of this booster and start the booster
+### 1.2. Get overview which Services and Subscriptions are part of this booster and *start* the booster
 
 ![Booster Overview](./images/boosteroverview.png)
 
@@ -38,9 +38,10 @@ As the booster completes, your subaccount will be ready to start building using 
 
 ![Booster Execution](./images/boosterexecution.png)
 
-### 1.4. After successful execution you can navigate to **Instances and Subscriptions** of your subaccount and find
-   * Application Subscriptions to **SAP Business Application Studio** and **Workflow Management**
-   * Service instances of **Destination** and **Workflow** Service
+### 1.4. After successful execution you can navigate to *Instances and Subscriptions* of your subaccount and find
+   * **SAP Business Application Studio** and **Workflow Management** subscribed in **Subscriptions** Tab
+   * **Destination** and **Workflow** Service instances created in **Instances** Tab
+   * **Cloud Foundry Runtime** environment created in **Environments** Tab
 
    ![Booster Results](./images/boosterfinish.png)
 
@@ -48,7 +49,7 @@ As the booster completes, your subaccount will be ready to start building using 
    
    ![Workflow Roles](./images/workflowroles.png)
 
-### 1.6. In upcoming parts we will use workflow APIs and for that we need to add the required authorization scopes to the services instance. Using the "Instances and Subscriptions" menu item on the left, update the *wm_workflow* service instance by using the "Update" button and following the dialog flow, paying attention at each of the steps:
+### 1.6. In upcoming parts we will use workflow APIs and for that we need to add the required authorization scopes to the services instance. Using the *"Instances and Subscriptions"* menu item on the left, update the *wm_workflow* service instance by using the "Update" button and following the dialog flow, paying attention at each of the steps:
 
 ![Update WF Service instance](./images/wf_update_service_instance.png)
 
@@ -79,9 +80,9 @@ As the booster completes, your subaccount will be ready to start building using 
 > The authorities you specified in the "Parameters" step will be needed in a later part, when you come to call the Workflow API.
 
 
-## Step 2 - Configure Business Application Studio for development
+## Step 2 - Configure SAP Business Application Studio for development
 
-### 2.1. Open BTP cockpit and navigated to **Instances and Subscriptions** inside your trial subaccount. Find **"SAP Business Application Studio"** within Application Subscriptions and launch it either from launch icon or "..." --> "Go to Application"
+### 2.1. Open SAP BTP cockpit and navigated to *Instances and Subscriptions* inside your trial subaccount. Find **"SAP Business Application Studio"** within Application Subscriptions and launch it either from launch icon or "..." --> "Go to Application"
    
 ![Start Business Application Studio](./images/bas_launch.png)
    
