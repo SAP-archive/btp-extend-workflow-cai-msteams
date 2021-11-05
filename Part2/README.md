@@ -1,11 +1,11 @@
 # SAP Workflow Management: create leave request workflow
 
-The objective of this part is to create leave request workflow, deploy and run it on BTP. Also understand the basic concepts how it works.
+The objective of this part is to create leave request workflow, deploy and run it on SAP BTP. Also understand the basic concepts how it works.
 
 
-## Step 1 - Business Application Studio getting started
+## Step 1 - SAP Business Application Studio getting started
 
-### 1.1. Launch Business Application Studio from BTP cockpit
+### 1.1. Launch SAP Business Application Studio from SAP BTP cockpit
    
    ![BAS launch](./images/bas_launch.png)
 
@@ -13,7 +13,7 @@ The objective of this part is to create leave request workflow, deploy and run i
    
    ![Start WF Dev Space](./images/bas_start_space.png)
 
-### 1.3. Open the space. Business Application Studio will initiate all necessary tools
+### 1.3. Open the space. SAP Business Application Studio will initiate all necessary tools
    
    ![Open WF Dev Space](./images/bas_wf_space.png)
 
@@ -24,7 +24,7 @@ The objective of this part is to create leave request workflow, deploy and run i
 
 ## Step 2 - Clone the Workflow project from GitHub and get familiar with it
 
-### 2.1. Clone following project from GitHub into your BAS workspace. Clone the project using either the Terminal in BAS and *git* CLI or BAS Github tools.
+### 2.1. Clone following project from GitHub into your SAP Business Application Studio workspace. Clone the project using either the Terminal in SAP Business Application Studio and *git* CLI or SAP Business Application Studio Github tools.
 
    ```bash/Shell
    git clone https://github.com/SAP-samples/btp-extend-workflow-cai-msteams.git
@@ -87,11 +87,11 @@ The objective of this part is to create leave request workflow, deploy and run i
 
    >Note, To keep the exercise simple, you will take the role of manager and approve or reject the leave request created by you. 
    
-## Step 3 - Build and deploy the Workflow in your BTP trial account
+## Step 3 - Build and deploy the Workflow in your SAP BTP trial account
 
-Now after exploring the leave request workflow definition, you can build and deploy it in your BTP trial account.
+Now after exploring the leave request workflow definition, you can build and deploy it in your SAP BTP trial account.
 
-### 3.1. Make sure that you are loged in your BTP account
+### 3.1. Make sure that you are loged in your SAP BTP account
    ```
       cf login -a <API Endpoint>
    ```
@@ -116,7 +116,7 @@ Now after exploring the leave request workflow definition, you can build and dep
 
 To be able to send approval or rejection email from Mail Task, we need to configure mail destination with SMTP credentials.
 
-### 4.1. Download the **"bpmworkflowruntime_mail"** destination from GitHub or from your BAS workspace
+### 4.1. Download the **"bpmworkflowruntime_mail"** destination from GitHub or from your SAP Business Application Studio workspace
    
    ![WF Mail Destination Download](./images/wf_destination_download.png)
 
@@ -126,7 +126,7 @@ To be able to send approval or rejection email from Mail Task, we need to config
        └── bpmworkflowruntime_mail
    ```
 
-### 4.2. Go to BTP cockpit and navigate to destinations and import the downloaded mail destination
+### 4.2. Go to SAP BTP cockpit and navigate to destinations and import the downloaded mail destination
    
    ![WF Import the mail destination](./images/wf_import_destination.png)
 
@@ -165,7 +165,7 @@ To be able to send approval or rejection email from Mail Task, we need to config
 
 After successful deployment of leave request workflow we can see the deployment and test it with sample leave request
 
-### 5.1. Go to BTP Cockpit and navigate to **"Instances and Subscriptions"** and run the **"Workflow Management"** using the highlighted icon
+### 5.1. Go to SAP BTP Cockpit and navigate to **"Instances and Subscriptions"** and run the **"Workflow Management"** using the highlighted icon
    
    ![WF launch](./images/wf_manag_launch.png)
    
@@ -183,7 +183,7 @@ After successful deployment of leave request workflow we can see the deployment 
 
    ![WF new instance](./images/wf_new_instance.png)
 
-   >Note, later in upcoming Part the leave request workflow will be triggered by API call from CAI chatbot
+   >Note, later in upcoming Part the leave request workflow will be triggered by API call from SAP Conversation AI chatbot
 
 ### 5.5. Go back to Workflow Management launchpad and open "Workflow Monitoring - Workflow Instances" tile
 
