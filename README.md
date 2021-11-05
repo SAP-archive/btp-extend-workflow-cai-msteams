@@ -52,7 +52,7 @@ Subscriptions required in your SAP Business Technology Platform Account:
 
 ## Further Information
 
-The scenario is based on a Blog Post: *[Integrating SAP Workflow Management with Microsoft Outlook](https://blogs.sap.com/2020/04/14/integrating-sap-cloud-platform-workflow-with-microsoft-outlook/)*  by [Harald Schubert](https://people.sap.com/harald.schubert) and is extended with SAP CAI, Microsoft Teams and Graph API capabilities.
+The scenario is based on a Blog Post: *[Integrating SAP Workflow Management with Microsoft Outlook](https://blogs.sap.com/2020/04/14/integrating-sap-cloud-platform-workflow-with-microsoft-outlook/)*  by [Harald Schubert](https://people.sap.com/harald.schubert) and is extended with SAP Conversational AI, Microsoft Teams and Graph API capabilities.
 
 
 ## Known Issues
