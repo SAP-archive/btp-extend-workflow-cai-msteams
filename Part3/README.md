@@ -9,7 +9,7 @@ Extend the previous part with SAP workflow to SAP Conversational AI to learn how
 
    Go to  [SAP Conversational AI](https://cai.tools.sap/) and click Sign Up in the upper-right corner.
    
-   > Use your BTP Account User/E-Mail to simplify the Identity authentication for later steps
+   > Use your SAP BTP Account User/E-Mail to simplify the Identity authentication for later steps
 
    Follow the instructions for creating an account. 
 
@@ -39,7 +39,7 @@ Extend the previous part with SAP workflow to SAP Conversational AI to learn how
 
      ![CAI Intends](./images/cai_intends.png)
 
-     For LeaveRequest bot we defined 3 intends: leave-request, greetings, goodbye
+     For LeaveRequest bot we defined 3 intents: leave-request, greetings, goodbye
 
    * **Build**: Create your conversational flow with Bot Builder tool. Here you give your bot skills it can perform.
 
@@ -56,13 +56,13 @@ Extend the previous part with SAP workflow to SAP Conversational AI to learn how
 
    * **Connect**: Ship your bot to one or several messaging platforms.
      
-     Here we integrate CAI bot with Microsoft Teams 
+     Here we integrate SAP Conversational AI bot with Microsoft Teams 
 
    * **Monitor**: See how users are communicating with your bot, check if the bot is understanding users correctly, and make updates to the bots intents/entities. Monitoring also lets you see what your users want, and gives you ideas of what additional capabilities you could add to the bot.
 
 ## Step 2 - Configure the Action to trigger Leave Request workflow
 
-### 2.1. Go to the Bot Builder tab of CAI and open **leave-request** skill
+### 2.1. Go to the Bot Builder tab of SAP Conversational AI and open **leave-request** skill
     
    ![CAI Leave Request skill](./images/cai_build_lr.png)
 
@@ -94,11 +94,11 @@ Extend the previous part with SAP workflow to SAP Conversational AI to learn how
     Authorization URL = uaa.url + "/oauth/token"
    ```
    
-   The parameters **workflow_rest_url, uaa.url, uaa.clientid and uaa.clientsecret** you can get from workflow service instance by BTP cockpit or CLI
+   The parameters **workflow_rest_url, uaa.url, uaa.clientid and uaa.clientsecret** you can get from workflow service instance by SAP BTP cockpit or CLI
 
 ### 2.5. Get the parameters required for previous step
    
-Go to BTP cockpit and navigate to **"Instances and Subscriptions"**. Find the Workflow service instance **"wm_workflow"** and click on credentials 
+Go to SAP BTP cockpit and navigate to **"Instances and Subscriptions"**. Find the Workflow service instance **"wm_workflow"** and click on credentials 
 
 ![CAI WF service instance](./images/cai_wf_service_instance.png)
 
@@ -124,20 +124,20 @@ Go to BTP cockpit and navigate to **"Instances and Subscriptions"**. Find the Wo
 
 ### 3.3. Check the triggered workflow in My Inbox (Optional)
 
->Note, to be able to see the Workflow Items in My Inbox, you should be signed-in in BTP with the Microsoft 365 User. If you used another User for your BTP account skip this step.
+>Note, to be able to see the Workflow Items in My Inbox, you should be signed-in in SAP BTP with the Microsoft 365 User. If you used another User for your SAP BTP account skip this step.
 
 Go to Workflow Management launchpad and open My Inbox application
 
 ![WF My Inbox](./images/wf_myinbox.png)
 
 
-### 3.4. You will find here the leave request triggered by Conversational AI
+### 3.4. You will find here the leave request triggered by SAP Conversational AI
    
 ![CAI WF request](./images/cai_wf_request.png)
 
 ## Step 4 - Connect with Azure Bot and Microsoft Teams
 
-### 4.1. Login into [Microsoft Azure](https://portal.azure.com/#home) and search for *"bot channel registration"* and open it to create a new Azure Bot resource
+### 4.1. Login into [Microsoft Azure](https://portal.azure.com/#home) and search for *"bot channels registration"* and open it to create a new Azure Bot resource
 
 ![Bot Channel Registration](./images/cai_bot-channel_reg.png)
 
@@ -178,7 +178,7 @@ Go to Workflow Management launchpad and open My Inbox application
 
 ### 4.7. Set up your bot endpoint
 
- CAI will generate a **Messaging enpoint** which we need to register in Bot Channel in Azure Portal
+ SAP Conversatinal AI will generate a **Messaging enpoint** which we need to register in Bot Channel in Azure Portal
   
    * Copy the **Messaging endpoint**
      ![CAI Connect](./images/cai_connect_1.png)
