@@ -116,7 +116,8 @@ Now after exploring the leave request workflow definition, you can build and dep
 
 To be able to send approval or rejection email from Mail Task, we need to configure mail destination with SMTP credentials.
 
-### 4.1. Download the **"bpmworkflowruntime_mail"** destination from GitHub or from your SAP Business Application Studio workspace
+
+### 4.1. Download the **"bpmworkflowruntime_mail"** destination from your SAP Business Application Studio workspace.
    
    ![WF Mail Destination Download](./images/wf_destination_download.png)
 
@@ -126,15 +127,21 @@ To be able to send approval or rejection email from Mail Task, we need to config
        └── bpmworkflowruntime_mail
    ```
 
-### 4.2. Go to SAP BTP cockpit and navigate to destinations and import the downloaded mail destination
+
+### 4.2. Open a new tab and go to your **dev** space in the SAP BTP cockpit. **Import** the downloaded mail destination.
+
    
    ![WF Import the mail destination](./images/wf_import_destination.png)
 
-### 4.3. Add your SMTP Server host and credentials
+### 4.3. Replace <your M365 mail address> with the mail address of your Microsoft365 developer account.
    
    ![WF Mail Destination](./images/wf_mail_destination.png)
 
-   >Note, the destination name should be **bpmworkflowruntime_mail**, otherwise the Workflow Mail Task will not find it.
+
+   **IMPORTANT**: Make sure that Multifactor Authentication (MFA) is not active in your Microsoft365 developer account, it'll cause issues while using SMTP Destination. In general we recommend using MFA but, not for this unit. You can find in [Troubleshooting](#troubleshooting) section how to deactivate it, in case you already activated it.   
+
+   
+   **IMPORTANT**: Do not change the Destination name! The destination name bpmworkflowruntime_mail is reference in other artifacats later on. 
 
    ```
       Type=MAIL
@@ -159,7 +166,7 @@ To be able to send approval or rejection email from Mail Task, we need to config
       mail.bpm.send.disabled=false
 
    ```
-    >Replace the SMTP host *mail.smtp.host* and *mail.smtp.from* also provide the credentials of SMTP Server.
+   >Replace the SMTP host *mail.smtp.host* and *mail.smtp.from* also provide the credentials of SMTP Server.
 
 ## Step 5 - Test the workflow definition 
 
@@ -214,7 +221,40 @@ After successful deployment of leave request workflow we can see the deployment 
 ### 5.10. In Workflow Monitoring under Execution Log you can see that all steps were successfully finished.
     
    ![WF Execution log](./images/wf_execution_log.png)
+
+
+## Troubleshooting   
+
+>Note: Misconfiguration of the **"bpmworkflowruntime_mail"** destination may cause some issues while trying to send the emails. 
+
+Using the **Monitor Workflow (Workflow Instances)** tools of the Workflow Management you can analyse and see the  cause of the issue.
    
+   ![WF monitoring instances](./images/wf_monitoring_instances.png)
+
+For example in Execution Log you can see the details of the issue in detail.
+
+Often SMTP servers are having additional security protections activated, which may cause the issue below, that the smtp credentials could not be validated. 
+
+```Could not send email: The server 'smtp.office365.com' could be reached, but the login with the given credentials failed. Verify that the credentials are valid for the server.```
+
+This issue occurs in case you have activated the Multifactor Authentication (MFA) in your Microsoft365 developer account.
+
+ ![WF Troubleshooting](./images/wf-troubleshooting.png)
+
+ ### Deactivate Multifactor Authentication (MFA) in your Microsoft365 developer account.
+
+With this we definitely don't want to tempt you to deactivate multi-factor authentication in general and always. MFA is good and should be used as far as possible! Nevertheless, there are always reasons why a global MFA cannot be used. In this case, here are the instructions.
+
+Go to [Microsoft 365 admin center](https://portal.office.com/adminportal/home) and open Azure Active Directory.
+
+We may have to log in again and we are logged in to the Azure AD Admin Portal. Here we can manage the security standards via Azure Active Directory -> Properties.
+
+ ![Office dev portal](./images/office-dev-portal.png)
+
+In this menu we can now switch off the standards defined by Microsoft.
+You will be asked briefly why you are doing this, after which there will no longer be a request for a mandatory MFA.
+
+ ![Disasble MFA](./images/disable-mfa.png)
 
 # Summary
 
