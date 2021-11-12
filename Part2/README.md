@@ -24,10 +24,14 @@ The objective of this part is to create leave request workflow, deploy and run i
 
 ## Step 2 - Clone the Workflow project from GitHub and get familiar with it
 
-### 2.1. Clone following project from GitHub into your SAP Business Application Studio workspace. Clone the project using either the Terminal in SAP Business Application Studio and *git* CLI or SAP Business Application Studio Github tools.
+### 2.1. Clone following project from GitHub into your SAP Business Application Studio workspace. Clone the project using either the Terminal in SAP Business Application Studio and *git* CLI or SAP Business Application Studio Github tools. Checkout the branch "basic-scope".
 
    ```bash/Shell
    git clone https://github.com/SAP-samples/btp-extend-workflow-cai-msteams.git
+   
+   cd btp-extend-workflow-cai-msteams/
+   
+   git checkout basic-scope
    ```
 ### 2.2. Workflow project you can find in **sample-coding/btp-workflow** folder.
    Project has following structure:
