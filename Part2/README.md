@@ -144,6 +144,7 @@ To be able to send approval or rejection email from Mail Task, we need to config
 
    **IMPORTANT**: Make sure that Multifactor Authentication (MFA) is not active in your Microsoft365 developer account, it'll cause issues while using SMTP Destination. In general we recommend using MFA but, not for this unit. You can find in [Troubleshooting](#troubleshooting) section how to deactivate it, in case you already activated it.   
 
+   **IMPORTANT**: Make sure that the mail setting **Authenticated SMTP** is activated in Microsoft 365 admin center (See [Troubleshooting](#troubleshooting)).   
    
    **IMPORTANT**: Do not change the Destination name! The destination name bpmworkflowruntime_mail is reference in other artifacats later on. 
 
@@ -259,6 +260,25 @@ In this menu we can now switch off the standards defined by Microsoft.
 You will be asked briefly why you are doing this, after which there will no longer be a request for a mandatory MFA.
 
  ![Disasble MFA](./images/disable-mfa.png)
+
+
+### Activate the email apps where the user can access ‎Microsoft 365‎ email
+
+In case of using Microsoft 365 email address in Destination Service (recommended approach for this course), we need to make sure that the **Authenticated SMTP** is activated in Microsoft 365 admin center.
+
+* Go to [Microsoft 365 admin center](https://portal.office.com/adminportal/home) and open Users / Active Users
+
+ ![Active Users](./images/select-365user.png)
+
+* Select the **User** you are using in Destination Service, open the Mail Tab and click on **Manage email apps**
+
+ ![Manage email apps](./images/manage_email_apps.png)
+
+ * Select all options and click on **Save changes**
+  
+ ![Manage email apps](./image/../images/manage_apps_save.png)
+
+After successfully activating the apps, you should be able to send the emails from SAP Workflow Management using the Destination Service and the Microsoft 365 email address.
 
 # Summary
 
