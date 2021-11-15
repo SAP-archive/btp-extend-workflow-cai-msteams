@@ -62,7 +62,7 @@ The application will use this secret to prove its identity when requesting a tok
 The custom Java app uses the SAP BTP destination service to interact with Microsoft Graph.
 For authentication, OAuth2ClientCredentials needs to be selected and the Client ID & Secret from the previous app registration is set.
 
-### 2.1. Download following [Destination Configuration](https://github.com/SAP-samples/btp-extend-workflow-cai-msteams/blob/main/sample-coding/btp-wf-outlook-integration/MSGraphAPI)
+### 2.1. Download following [Destination Configuration](https://github.com/SAP-samples/btp-extend-workflow-cai-msteams/blob/basic-scope/sample-coding/btp-wf-outlook-integration/MSGraphAPI)
 
 
 ### 2.2. Open SAP BTP Cockpit and navigate to Connectivity/Destinations and "Import Destination" from previous step
