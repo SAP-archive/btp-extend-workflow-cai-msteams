@@ -155,4 +155,14 @@ In this step, you will import the available time types from your SAP SuccessFact
 
 ![CAI entity config](./images/cai_entity_res.png)
 
+3.7 As a final step click on **Train** again, to train the bot once again! 
+
+   ![Train the bot](./images/cai_entity_train.png)
+
 You have successfully updated the entity values of your custom entity **#Leave_type** based on the time types of your SAP SuccessFactors instance. 
+
+### Step 4 - Testing your SAP Conversational AI bot
+
+Please be aware, that your SAP Conversational AI bot cannot be tested from within SAP CAI at this moment. As the bot requires an e-mail address of the current user context, you will probably run into issues when testing the bot within SAP CAI. Once the bot is connected to Microsoft Azure and you're starting it with a test user from Microsoft Teams, this context is available. 
+
+   ![Test mail](./images/cai_test_mail.png)
