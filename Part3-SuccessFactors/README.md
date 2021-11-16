@@ -12,17 +12,21 @@ The OAuth2 SAML Bearer authentication between SAP Cloud Integration and SAP Succ
 
 <br>
 
-### Step 1 - Create a technical API user in SAP SuccessFactors
+### Step 1 - Create a (technical) API user in SAP SuccessFactors
 
 1.1 In this simplified integration approach, we're using a technical user for the communication between SAP Cloud Integration and SAP SuccessFactors. As SAP Cloud Integration acts as an integration layer between SAP Conversational AI and SAP SuccessFactors, the end-users will never get in touch with this technical user. They are restricted in calling endpoints provided by SAP Cloud Integration, fulfilling exactly the purpose the end-user is supposed to use.
 
-1.2 As SAP SuccessFactors will retire the usage of Basic Authentication in the upcoming releases, we will make use of the OAuth2 SAML Bearer authentication approach in this case. Before you begin to go through the steps described in the SAP Blog, please create a technical API user in SAP SuccessFactors, which you can use for this scenario. 
+1.2 As SAP SuccessFactors will retire the usage of Basic Authentication in the upcoming releases, we will make use of the OAuth2 SAML Bearer authentication approach in this case. Before you begin to go through the steps described in the SAP Blog, please create a technical API user in SAP SuccessFactors, which you can use for this scenario. For simplification reasons, in our sample scenario we've used a super admin user like **sfadmin** (see below). 
 
-For simplification reasons, in our sample scenario we've used an administrative user like **sfadmin**. In a productive environment, you might need to ask your administrator to create a separate user for this purpose. 
+1.3 A technical SAP SuccessFactors API user for this scenario, must be allowed to access the OData APIs of SAP SuccessFactors using OAuth2. Furthermore, he must be allowed to create and modify the EmployeeTime records of all users in the system. Last but not least, the user needs to read basic user information of all users (like the direct manager of an employee, the employee id or e-mail addresses). Please ensure, that your technical API user fulfills these requirements. 
 
-1.3 A technical SAP SuccessFactors for this scenario, must be allowed to access the OData APIs of SAP SuccessFactors using OAuth2. Furthermore he must be allowed to create and modify the EmployeeTime records of all users in the system. 
+**Important**: Using a user with wrong authorizations may result in missing privileges to call APIs but also to situations. Furthermore scenarios might occure, in which leave requests will be approved automatically. Based on our development experiences, we want to share the following findings with you: 
 
-Last but not least, the user needs to read basic user information of all users (like the direct manager of an employee, the employee id or e-mail addresses). Please ensure, that your technical API user fulfills these requirements. 
+- If a leave request is created by an API user with **HR Admin privileges** and no workflow is configured for Admin users, the leave request is approved automatically. Please see the following KBA for further information: https://launchpad.support.sap.com/#/notes/0002548343
+
+- If the selected API user has very powerful privileges on the **MDF OData API**, this can lead to situations in which leave requests are automatically confirmed. This has not been validated yet, but if you're facing situations in which your leave requests (created from SAP Microsoft Teams) are automatically approved, also check the following KBA for further information: https://launchpad.support.sap.com/#/notes/2396714 
+
+>**Hint**: In this tutorial, a new super admin user was created for the API communication purpose (for further information see KBA https://launchpad.support.sap.com/#/notes/2186617). Please discuss with your SAP SuccessFactors administrator, as the super admin user approach taken in this tutorial, might not be suitable for a productive scenario. In this case a more restricted API user might be required! 
 
 <br>
 
@@ -30,7 +34,7 @@ Last but not least, the user needs to read basic user information of all users (
 
 Follow Step 1 of the linked [SAP Blog post](https://blogs.sap.com/2021/03/26/sap-cloud-integration-oauth2-saml-bearer-x.509-certificate-authentication-support-in-successfactors-connector/), to create a Key-Pair for your technical user.
 
-If your technical user is e.g. **sfadmin**, you need to provide **sfadmin** as the **Common Name - CN** when creating the certificate. As described in the blog, please download the certificate of the Key-Pair on your local device. You will need it when configuring the OAuth2 client within SAP SuccessFactors. Also note down the name which you've given your Key-Pair. You will need it in a later step. 
+If your technical API user is e.g. **sfadmin**, you need to provide **sfadmin** as the **Common Name - CN** when creating the certificate. As described in the blog, please download the certificate of the Key-Pair on your local device. You will need it when configuring the OAuth2 client within SAP SuccessFactors. Also note down the name which you've given your Key-Pair. You will need it in a later step. 
 
 > **Hints**: Give your Key-Pair a meaningful name which you can easily recognize. 
 
