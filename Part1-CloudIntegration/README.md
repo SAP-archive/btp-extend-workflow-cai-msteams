@@ -54,4 +54,6 @@ First open the "CAI Create Leave Request" iFlow
 * CAI Time Type Entities
 * CAI Time Types
 
+![Deploy the iFlow](./images/cif_0100.png) 
+
 Congratulations, you successfully imported required integration flows. In next parts you will configure the iFlows based on your systems and access credentials.

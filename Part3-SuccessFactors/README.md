@@ -2,18 +2,9 @@
 
 As SAP Cloud Integration will be the integration layer for the communication between SAP Conversational AI and SAP SuccessFactors, we will need to configure the respective user credentials to allow system-to-system interaction between both products. 
 
-In the first part of this tutorial, you've already imported the relevant integration flows into your SAP Cloud Integration tenant. You can use these integration flows as provided (except of providing some configuration parameters before deployment). 
+In the first part of this tutorial, you've already imported the relevant integration flows into your SAP Cloud Integration tenant. You can use these integration flows as provided (except of providing some configuration parameters before deployment). One of these configuration parameters is the name of the credential configuration within SAP Cloud Integration. This credential configuration will be done within the following part of the tutorial.
 
-One of these configuration parameters is the name of the credential configuration within SAP Cloud Integration. This credential configuration will be done within the following part of the tutorial.
-
-### Step 1 - Create a technical API user in SAP SuccessFactors
-### Step 2 - Create a Key-Pair in SAP Cloud Integration
-### Step 3 - Create an OAuth2 client in SAP SuccessFactors 
-### Step 4 - Create the credential configuration in SAP Cloud Integration
-### Step 5 - Replace the credential configuration in your integration flows
-<br>
-
-This part of the tutorial is based on the following SAP Blog post, published in March 2021. It describes in a comprehensive way, how the OAuth2 SAML Bearer authentication can be implemented with a fixed user.
+This tutorial section is based on the following SAP Blog post, published in March 2021. It describes in a comprehensive way, how the OAuth2 SAML Bearer authentication can be implemented with a fixed user.
 
 https://blogs.sap.com/2021/03/26/sap-cloud-integration-oauth2-saml-bearer-x.509-certificate-authentication-support-in-successfactors-connector/
 
@@ -23,9 +14,7 @@ The OAuth2 SAML Bearer authentication between SAP Cloud Integration and SAP Succ
 
 ### Step 1 - Create a technical API user in SAP SuccessFactors
 
-1.1 In this simplified integration approach, we're using a technical user for the communication between SAP Cloud Integration and SAP SuccessFactors. As SAP Cloud Integration acts as an integration layer between SAP Conversational AI and SAP SuccessFactors, the end-users will never get in touch with this technical user.
-
-They are restricted in calling endpoints provided by SAP Cloud Integration, fulfilling exactly the purpose the end-user is supposed to use.
+1.1 In this simplified integration approach, we're using a technical user for the communication between SAP Cloud Integration and SAP SuccessFactors. As SAP Cloud Integration acts as an integration layer between SAP Conversational AI and SAP SuccessFactors, the end-users will never get in touch with this technical user. They are restricted in calling endpoints provided by SAP Cloud Integration, fulfilling exactly the purpose the end-user is supposed to use.
 
 1.2 As SAP SuccessFactors will retire the usage of Basic Authentication in the upcoming releases, we will make use of the OAuth2 SAML Bearer authentication approach in this case. Before you begin to go through the steps described in the SAP Blog, please create a technical API user in SAP SuccessFactors, which you can use for this scenario. 
 
@@ -116,5 +105,7 @@ A sample of how such a configuration could look like for an SAP SuccessFactors S
 * CAI Time Balance
 * CAI Time Type Entities
 * CAI Time Types
+
+![SFSF](./images/sfsf050.png) 
 
 You've successfully updated your integration flow configurations to establish a secure technical user communication between SAP Cloud Integration and SAP SuccessFactors. 
