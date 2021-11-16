@@ -78,7 +78,7 @@ https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Publ
 
 ## 2 Integration between SAP SuccessFactors and your custom IAS/IPS instance
 
-Your SAP SuccessFactors instance must have an integration with the same IAS/IPS instance which you've configured as Trusted Identity Provider within your BTP subaccount (see requirement in step 1)! The integration configuration between SAP SuccessFactors and your custom IAS/IPS instance is not trivial and also not scope of this mission. We assume, that you've already configured this integration successfully before you continue with the next steps. If not, we strongly recommend, going through the following documentations and KBA to get an idea of the whole process.
+Your SAP SuccessFactors instance must have an integration with the same IAS/IPS instance which you've configured as Trusted Identity Provider within your BTP subaccount (see requirement in step 1)! The integration configuration between SAP SuccessFactors and your custom IAS/IPS instance is not trivial and also not scope of this mission. We assume, that you've already configured this integration successfully before you continue with the next steops. If not, we strongly recommend, going through the following documentations and KBA to get an idea of the whole process.
 
 [SAP Help] Setting Up SAP SuccessFactors with Identity Authentication and Identity Provisioning Services
 https://help.sap.com/viewer/568fdf1f14f14fd089a3cd15194d19cc/2105/en-US/fb069584363a4df08aad42315cebdd6d.html 
@@ -160,7 +160,7 @@ Copy the API Key of this OAuth Client, once you saved it by clicking on **View**
 
 The SAP Task Center service communicates with your SAP applications like SAP SuccessFactors by using the SAP Connectivity Service. Therefor you need to configure respective destinations within your SAP BTP subaccount, which is hosting your SAP Task Center instance. 
 
-4.1 To create the required destinations in your SAP BTP subaccount, you need to create a new Service Key for your SAP Task Center instance as client credentials need to be provided in the destination. Therefor please go the **Instances and Subscriptions** section of your subaccount and create a new service key for your SAP Task Center service. Give it a unique name and click on **Create**.
+4.1 To create the required destinations in your BTP subaccount, you need to create a new Service Key for your SAP Task Center instance as client credentials need to be provided in the destination. Therefor please go the **Instances and Subscriptions** section of your subaccount and create a new service key for your SAP Task Center service. Give it a unique name and click on **Create**.
 
 ![TaskCenter](./images/tc110.png)
 
@@ -267,7 +267,7 @@ This process is **NOT** intended for a productive landscape, as the user UUID ca
 
 **! Important !**
 
-7.1 To add an user UUID to a SAP SuccessFactors user, call the following SCIM API endpoint using Basic Authentication, to read the user id of a specific SAP SuccessFactors user. 
+7.1 To add an user UUID to a SuccessFactors user, call the following SCIM API endpoint using Basic Authentication, to read the user id of a specific SAP SuccessFactors user. 
 
 **GET**</br>
 https://&lt;SuccessFactors API endpoint&gt;.successfactors.com/rest/scim/Users?filter=userName eq '&lt;SuccessFactors user name&gt;' </br>
