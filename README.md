@@ -17,13 +17,12 @@ The Objective of the advanced scope is similar to basic scope and the idea is to
 This mission requires you to have access to a SAP SuccessFactors system. This includes administrative privileges to define settings like OAuth clients or to assign test users the relevant privileges to access OData APIs. This mission was created based on an SAP SuccessFactors Salesdemo environment instance. A productive landscape might differ in configuration options.
 
 1. [SAP Cloud Integration ](./Part1-CloudIntegration/README.md)
-   - Import the required Cloud Integration flows
-   - Configure the Cloud Integration flow
+   - Import the required Cloud Integration Flows
 
 2. [SAP API Management](./Part2-APIManagement/README.md)
    - Create the required API Management endpoint
    - Enable Actionable Messages (Adaptive Cards)
-   - Configure the Cloud Integration flow
+   - Configure the Cloud Integration Flow
 
 3. [SAP SuccessFactors](./Part3-SuccessFactors/README.md)
    - Configure the SAP SuccessFactors - SAP CI integration

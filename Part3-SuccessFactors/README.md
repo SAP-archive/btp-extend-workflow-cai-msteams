@@ -2,7 +2,7 @@
 
 As SAP Cloud Integration will be the integration layer for the communication between SAP Conversational AI and SAP SuccessFactors, we will need to configure the respective user credentials to allow system-to-system interaction between both products. 
 
-In the first part of this tutorial, you've already imported the relevant integration flows into your SAP Cloud Integration tenant. You can use these integration flows as provided (except of providing some configuration parameters before deployment). One of these configuration parameters is the name of the credential configuration within SAP Cloud Integration. This credential configuration will be done within the following part of the tutorial.
+In the first part of this tutorial, you've already imported the relevant Integration Flows into your SAP Cloud Integration tenant. You can use these Integration Flows as provided (except of providing some configuration parameters before deployment). One of these configuration parameters is the name of the credential configuration within SAP Cloud Integration. This credential configuration will be done within the following part of the tutorial.
 
 This tutorial section is based on the following SAP Blog post, published in March 2021. It describes in a comprehensive way, how the OAuth2 SAML Bearer authentication can be implemented with a fixed user.
 
@@ -76,13 +76,13 @@ Please make sure you replace the respective values with your own settings as des
 
 <br>
 
-### Step 5 - Replace the credential configuration in your integration flows
+### Step 5 - Replace the credential configuration in your Integration Flows
 
-Once you've created your personal SAP SuccessFactors credential configuration in Step 4, you have to integrate it into your integration flows, which you've imported in part 1 of this tutorial. 
+Once you've created your personal SAP SuccessFactors credential configuration in Step 4, you have to integrate it into your Integration Flows, which you've imported in part 1 of this tutorial. 
 
-5.1 Therefor, please open the integration flows one after another and perform the following steps. 
+5.1 Therefor, please open the Integration Flows one after another and perform the following steps. 
 
-5.2 If you e.g. open the **Approve Leave Request** integration flow, please click on **Configure** in the read-only mode. This allows you to set custom variables, which are embedded in the integration flow and require your customer specific landscape settings. 
+5.2 If you e.g. open the **Approve Leave Request** Integration Flow, please click on **Configure** in the read-only mode. This allows you to set custom variables, which are embedded in the Integration Flow and require your customer specific landscape settings. 
 
 ![SFSF](./images/sfsf020.png) 
 
@@ -92,7 +92,7 @@ Once you've created your personal SAP SuccessFactors credential configuration in
 
 ![SFSF](./images/sfsf035.png) 
 
-5.4 In the provided sample integration flows, a dummy value has been set for the **Address** and **Credential Name** field. Please replace these values with your customer specific **SAP SuccessFactors API endpoint** and the **name** of your **credential configuration**, which you noted down in step 4. 
+5.4 In the provided sample Integration Flows, a dummy value has been set for the **Address** and **Credential Name** field. Please replace these values with your customer specific **SAP SuccessFactors API endpoint** and the **name** of your **credential configuration**, which you noted down in step 4. 
 
 Once you've set the respective field values for **all SFSF Adapter Types**, first **Save** and then **Deploy** the Integration Flow to your SAP Cloud Integration tenant. When deploying the **CAI Create Leave Request** Integration Flow, please also check your **Mail** configuration once again (you have done the configuration in Part 2 of this tutorial). 
 
@@ -102,7 +102,7 @@ A sample of how such a configuration could look like for an SAP SuccessFactors S
 
 ![SFSF](./images/sfsf040.png) 
 
-5.5 Repeat the steps 5.1 - 5.4 with all integration flows of your imported SAP Cloud Integration package. 
+5.5 Repeat the steps 5.1 - 5.4 with all Integration Flows of your imported SAP Cloud Integration package. 
 
 * CAI Approve Leave Request
 * CAI Create Leave Request

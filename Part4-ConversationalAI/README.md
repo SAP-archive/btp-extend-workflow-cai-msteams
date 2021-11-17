@@ -119,7 +119,7 @@ Let's adjust the forked bot to your needs and connect it to your instance of SAP
 2.11 As a final step click on **Train** to train the bot a first time. 
    ![Train the bot](./images/cai_env_train.png)
 
-You have successfully configured the bot to trigger an SAP Cloud Integration flow in your own BTP environment, once the bot has fulfilled all requirements. 
+You have successfully configured the bot to trigger an SAP Cloud Integration Flow in your own BTP environment, once the bot has fulfilled all requirements. 
 
 <br>
 

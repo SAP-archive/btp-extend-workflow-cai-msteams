@@ -92,7 +92,7 @@ Now the API for approving the leave request is successfully imported and deploye
 
 ![SFSF](./images/apimng0122.png) 
 
-1.23 This API will be used in an Adaptive Card when we send the Card as a mail in a SAP Cloud Integration flow
+1.23 This API will be used in an Adaptive Card when we send the Card as a mail in a SAP Cloud Integration Flow
 
 
 ###  Step 2 - Enable Actionable Messages (Adaptive Cards)

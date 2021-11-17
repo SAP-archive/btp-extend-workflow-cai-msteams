@@ -1,6 +1,6 @@
 # Setting up Cloud Integration
 
-SAP Cloud Integration will be the integration layer for the communication between SAP Conversational AI (integrated with Microsoft Teams) and SAP SuccessFactors to allow system-to-system interaction between both products. In this part of this mission, you will import the relevant integration flows into your SAP Cloud Integration tenant. You can use these integration flows as provided (except of providing some configuration parameters before deployment).
+SAP Cloud Integration will be the integration layer for the communication between SAP Conversational AI (integrated with Microsoft Teams) and SAP SuccessFactors to allow system-to-system interaction between both products. In this part of this mission, you will import the relevant Integration Flows into your SAP Cloud Integration tenant. You can use these Integration Flows as provided (except of providing some configuration parameters before deployment).
 
 ## Step 1 - Import your Integration Flows
 In this step, you will import an Integration Flow into SAP Cloud Integration. This Integration Flow will be responsible for the communication between SAP Conversational AI and SAP SuccessFactors to allow system-to-system interaction between both products. It contains a major part of your extension logic and gives you a first impression of the advanced features provided by the Integration Suite. As SAP Cloud Integration is a very powerful tool with a lot of features and configuration options, make sure you read all instructions carefully before development. This prevents you from missing any detail, which might cause you analysis effort in the end.
@@ -8,7 +8,6 @@ In this step, you will import an Integration Flow into SAP Cloud Integration. Th
 1.1 Go to your SAP BTP subaccount. Select the **Instances and Subscriptions** section on the left and click on your SAP Integration Suite application subscription. This will open the SAP Integration Suite Launchpad in a new browser tab.
 
 ![Open Cloud Integration](./images/cif_0010.png) 
-
 
 1.2 In the SAP Integration Suite Launchpad please click on the SAP Cloud Integration capability. This will open the required component in the same window.
 
@@ -25,7 +24,7 @@ In this step, you will import an Integration Flow into SAP Cloud Integration. Th
 
 ![Import iFlow](./images/cif_0050.png) 
 
-1.6 Go to the  **"Artifacts"** tab where you can find five integration flows. One will be used for creating a leave request and the second iFlow is will be used for approving the leave request. The three other integration flows are required to read time types and balances from SAP SuccessFactors. 
+1.6 Go to the  **"Artifacts"** tab where you can find five Integration Flows. One will be used for creating a leave request and the second iFlow is will be used for approving the leave request. The three other Integration Flows are required to read time types and balances from SAP SuccessFactors. 
 
 ![CAI Create Leave Request](./images/cif_0060.png) 
 
@@ -34,4 +33,4 @@ In this step, you will import an Integration Flow into SAP Cloud Integration. Th
 >The **SMTP Server credentials** will be configured in Part 2 of the tutorial, and the **SAP SuccessFactors credentials** will follow in Part 3. This is also the place where the **actual deployment** will be done! 
 
 
-Congratulations, you successfully imported required integration flows. In next parts you will configure the iFlows based on your systems and access credentials.
+Congratulations, you successfully imported required Integration Flows. In next parts you will configure the iFlows based on your systems and access credentials.
