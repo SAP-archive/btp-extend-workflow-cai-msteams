@@ -88,13 +88,13 @@ Once you've created your personal SAP SuccessFactors credential configuration in
 
 5.3 From the **Receiver** dropdown, please select SFSF (if dropdown is enabled) and select the Adapter Type **SuccessFactors**. 
 
-Please be aware, that there might be multiple Adapter Type instances called **SuccessFactors**! If this case, please repeat the steps for all available **SuccessFactors** Adapter Type instances. 
+**Important**: Please be aware, that there might be multiple Adapter Type instances called **SuccessFactors** (as seen in the screenshot)! If this is the case, please go through all available instances and check if the relevant configuration (see next step) has been updated automatically. If not, please adjust the other instances manually. 
 
 ![SFSF](./images/sfsf035.png) 
 
-5.4 In the provided sample integration flows, a dummy value has been set for the **Address** and **Credential Name** field. 
+5.4 In the provided sample integration flows, a dummy value has been set for the **Address** and **Credential Name** field. Please replace these values with your customer specific **SAP SuccessFactors API endpoint** and the **name** of your **credential configuration**, which you noted down in step 4. 
 
-Please replace these values with your customer specific **SAP SuccessFactors API endpoint** and the **name** of your **credential configuration**, which you noted down in step 4. Once you've set the respective field values for **all SFSF Adapter Types**, redeploy the Integration Flow to your tenant. 
+Once you've set the respective field values for **all SFSF Adapter Types**, first **Save** and then **Deploy** the Integration Flow to your SAP Cloud Integration tenant. When deploying the **CAI Create Leave Request** Integration Flow, please also check your **Mail** configuration once again (you have done the configuration in Part 2 of this tutorial). 
 
 ![SFSF](./images/sfsf030.png) 
 
@@ -112,4 +112,4 @@ A sample of how such a configuration could look like for an SAP SuccessFactors S
 
 ![SFSF](./images/sfsf050.png) 
 
-You've successfully updated your integration flow configurations to establish a secure technical user communication between SAP Cloud Integration and SAP SuccessFactors. 
+You've successfully updated and finally **deployed** your Integration Flows to establish a secure technical user communication between SAP Cloud Integration and SAP SuccessFactors. 

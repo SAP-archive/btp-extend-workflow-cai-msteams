@@ -188,21 +188,19 @@ https://ff149380trial-trial.integrationsuitetrial-apim.eu10.hana.ondemand.com/ff
 
 ![Save](./images/apimng0039.png)
 
-3.10 Deploy the iFlow by clicking **Deploy**
+3.10 Please still **hesitate the desire to deploy the Integration Flows**. This will still result in a **deployment error** at this state of the tutorial, as the credential configuration for SAP SuccessFactors and and the SMTP Server has not been defined yet. 
 
-![Deploy](./images/apimng0310.png)
+>The **SMTP Server credentials** will be configured right now, and the **SAP SuccessFactors credentials** will follow in Part 3 of this tutorial. This is also the place where the **actual deployment** will be done! 
 
-3.11 As as final step you need to configure the credentials of your SMTP Server  
-
-3.12 Go to **Monitor** and open the **Security Material** in SAP Cloud Integration Cockpit
+3.11 To configure the credentials of your SMTP Server, please go to **Monitor** and open the **Security Material** in SAP Cloud Integration Cockpit
 
 ![Keystore](./images/apimng0312.png)
 
-3.13 **Create** new **User Credential**
+3.12 **Create** new **User Credential**
 
 ![usercredential](./images/apimng0313.png)
 
-3.14 Provide the Name: **SMTP_SERVER** , user and password of the SMTP server and press **Deploy**
+3.13 Provide the Name: **SMTP_SERVER** , user and password of the SMTP server and press **Deploy**
 
 ![Deploy usercredential](./images/apimng0314.png)
 

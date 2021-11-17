@@ -27,33 +27,11 @@ In this step, you will import an Integration Flow into SAP Cloud Integration. Th
 
 1.6 Go to the  **"Artifacts"** tab where you can find five integration flows. One will be used for creating a leave request and the second iFlow is will be used for approving the leave request. The three other integration flows are required to read time types and balances from SAP SuccessFactors. 
 
-First open the "CAI Create Leave Request" iFlow
-
 ![CAI Create Leave Request](./images/cif_0060.png) 
 
+1.7 Please **hesitate the desire to deploy the Integration Flows** right now. This will lead to a **deployment error** at this state of the tutorial, as the credential configuration for SAP SuccessFactors and and the SMTP Server has not been done yet. 
 
-1.7 Click on **Deploy** to deploy the iFlow and confirm with "Yes".
+>The **SMTP Server credentials** will be configured in Part 2 of the tutorial, and the **SAP SuccessFactors credentials** will follow in Part 3. This is also the place where the **actual deployment** will be done! 
 
-![Deploy the iFlow](./images/cif_0070.png) 
-![Deploy the iFlow](./images/cif_0070_2.png) 
-
-1.8 Go back to content package where you can find the second iFlow "CAI Approve Leave Request" and open it
-
-
-![CAI Approve Leave Request](./images/cif_0080.png) 
-
-1.9 Click on **Deploy** to deploy the iFlow and confirm with "Yes". 
-
-
-![Deploy the iFlow](./images/cif_0090.png) 
-![Deploy the iFlow](./images/cif_0090_2.png) 
-
-1.10 Repeat the steps 1.6 - 1.9 for the three remaining integration flows and deploy them to your personal SAP Cloud Integration instance. 
-
-* CAI Time Balance
-* CAI Time Type Entities
-* CAI Time Types
-
-![Deploy the iFlow](./images/cif_0100.png) 
 
 Congratulations, you successfully imported required integration flows. In next parts you will configure the iFlows based on your systems and access credentials.
