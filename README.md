@@ -49,6 +49,13 @@ This mission requires you to have access to a SAP SuccessFactors system. This in
    - Apply your SAP Task Center destination settings
    - APPENDIX: Manual setting of the user UUID in SAP SuccessFactors
 
+## Demo Video
+
+The following demo video shows an end-to-end scenario in which a leave request is created in Microsoft Teams by the sample employee **Stephanie Decker**. The leave request is then available in the ToDo list of Stephanie's manager within SAP SuccessFactors. Furthermore the sample manager **Caroline Bushell** can open the leave request within the new SAP Task Center. 
+
+https://user-images.githubusercontent.com/24495229/142203891-8abbd765-8017-4ea9-b88b-0d6bdafe90f3.mp4
+
+
 ## Known Issues
 
 No known issues at this time
