@@ -10,6 +10,8 @@ https://blogs.sap.com/2021/03/26/sap-cloud-integration-oauth2-saml-bearer-x.509-
 
 The OAuth2 SAML Bearer authentication between SAP Cloud Integration and SAP SuccessFactors is required, as the Basic Authentication will be deprecated from SAP SuccessFactors side in one of the upcoming releases. 
 
+**Important**: This tutorial has been build on the SAP SuccessFactors Salesdemo release **Amsterdam 2005** (b2111p6e.20211116201949). If your SAP SuccessFactors release differs from this version, API calls might be different. Please check the relevant logs within SAP Cloud Integration, whether you're facing respective API errors while troubleshooting. 
+
 <br>
 
 ### Step 1 - Create a (technical) API user in SAP SuccessFactors
