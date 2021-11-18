@@ -96,19 +96,19 @@ Once you've created your personal SAP SuccessFactors credential configuration in
 
 5.1 Therefor, please open the Integration Flows one after another and perform the following steps. 
 
-5.2 If you e.g. open the **Approve Leave Request** Integration Flow, please click on **Configure** in the read-only mode. This allows you to set custom variables, which are embedded in the Integration Flow and require your customer specific landscape settings. 
+5.2 Please open the **CAI Time Balance** Integration Flow and please click on **Configure** in the read-only mode. This allows you to set custom variables, which are embedded in the Integration Flow and require your customer specific landscape settings. 
 
 ![SFSF](./images/sfsf020.png) 
 
-5.3 From the **Receiver** dropdown, please select SFSF (if dropdown is enabled) and select the Adapter Type **SuccessFactors**. 
+5.3 In the **Receiver** dropdown, the value **SFSF** should be preselected. Please proceed and select the Adapter Type **SuccessFactors**. 
 
-**Important**: Please be aware, that there might be multiple Adapter Type instances called **SuccessFactors** (as seen in the screenshot)! If this is the case, please go through all available instances and check if the relevant configuration (see next step) has been updated automatically. If not, please adjust the other instances manually. 
+**Important**: Please be aware, that there might be **multiple Adapter Type instances** called **SuccessFactors** (as seen in the screenshot)! Please go through all available instances and check if the relevant configuration described in the next step is updated automatically. If this is not the case, please adjust the configuration manually for all **Adapter Type instances**.
 
 ![SFSF](./images/sfsf035.png) 
 
-5.4 In the provided sample Integration Flows, a dummy value has been set for the **Address** and **Credential Name** field. Please replace these values with your customer specific **SAP SuccessFactors API endpoint** and the **name** of your **credential configuration**, which you noted down in step 4. 
+5.4 In the provided Integration Flow, a dummy value has been set for the **Address**, **Address Suffix** and **Credential Name** field. Please replace the **Address** and the **Credential Name** values with your customer specific **SAP SuccessFactors API endpoint** and the **name** of your **credential configuration**, which you noted down in step 4. The Address Suffix must not be changed!
 
-Once you've set the respective field values for **all SFSF Adapter Types**, first **Save** and then **Deploy** the Integration Flow to your SAP Cloud Integration tenant. When deploying the **CAI Create Leave Request** Integration Flow, please also check your **Mail** configuration once again (you have done the configuration in Part 2 of this tutorial). 
+Once you've set the respective field values for **all SFSF Adapter Type instances**, first click on **Save** and then on **Deploy**, to deploy the Integration Flow to your SAP Cloud Integration tenant. 
 
 ![SFSF](./images/sfsf030.png) 
 
@@ -116,14 +116,46 @@ A sample of how such a configuration could look like for an SAP SuccessFactors S
 
 ![SFSF](./images/sfsf040.png) 
 
-5.5 Repeat the steps 5.1 - 5.4 with all Integration Flows of your imported SAP Cloud Integration package. 
+5.5 Repeat the steps 5.2 - 5.4 for the following two Integration Flows of your imported SAP Cloud Integration package.
 
-* CAI Approve Leave Request
-* CAI Create Leave Request
-* CAI Time Balance
 * CAI Time Type Entities
 * CAI Time Types
 
 ![SFSF](./images/sfsf050.png) 
+
+5.6 Now, please open the **CAI Approve Leave Request** Integration Flow, as some special configuration is required here. 
+
+5.7 Select the **Receiver SFSF_1** and the **first SuccessFactors** instance from the **Adapter Type** list. Fill in the credentials you've also used in Step 5.4.  
+
+![SFSF](./images/sfsf060.png) 
+
+5.8 Select the **second SuccessFactors** instance from the **Adapter Type** list. Fill in the credentials you've also used in Step 5.4.  
+
+![SFSF](./images/sfsf070.png) 
+
+5.9 Select the Receiver **SFSF_2** and the **first HCIOData** instance from the **Adapter Type** list. Fill in the credentials you've also used in Step 5.4.  
+
+![SFSF](./images/sfsf080.png) 
+
+5.10 Select **second HCIOData** instance from the **Adapter Type** list. Fill in the credentials you've also used in Step 5.4. Additionally add your SAP SuccessFactors API user in the **api_user** field (in our case this would the be super admin user **sfadmin** which we created for this tutorial - see Step 1.3).
+
+![SFSF](./images/sfsf090.png)
+
+5.11 Once you've set the respective field values click on **Save** and then on **Deploy**, to deploy the Integration Flow to your SAP Cloud Integration tenant. 
+
+5.12 Now, please open the **CAI Create Leave Request** Integration Flow, as some special configuration is required here. 
+
+5.13 Select the **Receiver SFSF** and the **first SuccessFactors** instance from the **Adapter Type** list. Fill in the credentials you've also used in Step 5.4.  
+
+![SFSF](./images/sfsf100.png) 
+
+5.14 Repeat the same step for the other two available **SuccessFactors Adapter Types** and check, whether the values have been update automatically. If not, please adjust them manually.
+
+![SFSF](./images/sfsf110.png) 
+
+5.15 Select the **Receiver Mail** and double check, if your configurations which you've done in Part 2 of this tutorial, are still persisted. If not, please return to Part 2 of the tutorial and update your values accordingly. 
+
+5.16 Once you've set the respective field values click on **Save** and then on **Deploy**, to deploy the Integration Flow to your SAP Cloud Integration tenant. 
+
 
 You've successfully updated and finally **deployed** your Integration Flows to establish a secure technical user communication between SAP Cloud Integration and SAP SuccessFactors. 
