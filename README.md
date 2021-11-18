@@ -55,6 +55,10 @@ The following demo video shows an end-to-end scenario in which a leave request i
 
 https://user-images.githubusercontent.com/24495229/142203891-8abbd765-8017-4ea9-b88b-0d6bdafe90f3.mp4
 
+The following video shows and end-to-end scenario in which a leave request is approved via an adaptive card, which is automatically send to to **Caroline Bushell** who is the manager of our sample employee **Stephanie Decker**. 
+
+https://user-images.githubusercontent.com/24495229/142458692-8da06102-ec5f-48c3-8223-464de72a514c.mp4
+
 
 ## Known Issues
 
