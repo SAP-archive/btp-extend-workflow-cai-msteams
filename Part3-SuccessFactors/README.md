@@ -16,17 +16,29 @@ The OAuth2 SAML Bearer authentication between SAP Cloud Integration and SAP Succ
 
 1.1 In this simplified integration approach, we're using a technical user for the communication between SAP Cloud Integration and SAP SuccessFactors. As SAP Cloud Integration acts as an integration layer between SAP Conversational AI and SAP SuccessFactors, the end-users will never get in touch with this technical user. They are restricted in calling endpoints provided by SAP Cloud Integration, fulfilling exactly the purpose the end-user is supposed to use.
 
-1.2 As SAP SuccessFactors will retire the usage of Basic Authentication in the upcoming releases, we will make use of the OAuth2 SAML Bearer authentication approach in this case. Before you begin to go through the steps described in the SAP Blog, please create a technical API user in SAP SuccessFactors, which you can use for this scenario. For simplification reasons, in our sample scenario we've used a super admin user like **sfadmin** (see below). 
+1.2 As SAP SuccessFactors will retire the usage of Basic Authentication in the upcoming releases, we will make use of the OAuth2 SAML Bearer authentication approach in this case. Before you begin to go through the steps described in the SAP Blog, please create a technical API user in SAP SuccessFactors, which you can use for this scenario. For simplification reasons, in our sample scenario we've used a new super admin user (see below). 
 
-1.3 A technical SAP SuccessFactors API user for this scenario, must be allowed to access the OData APIs of SAP SuccessFactors using OAuth2. Furthermore, he must be allowed to create and modify the EmployeeTime records of all users in the system. Last but not least, the user needs to read basic user information of all users (like the direct manager of an employee, the employee id or e-mail addresses). Please ensure, that your technical API user fulfills these requirements. 
+1.3 A technical SAP SuccessFactors API user for this scenario, must be allowed to access the OData APIs of SAP SuccessFactors using OAuth2. Furthermore, he must be allowed to **create and modify the EmployeeTime records** of all users in the system. The technical user must be authorized to **Change Workflow Assignements** and to **Manage Workflow Requests**. Last but not least, the user needs to **read basic user information** of all users (like the direct manager of an employee, the employee id or e-mail addresses). Please ensure, that your technical API user fulfills these requirements or follow the approach taken in this tutorial (see below).
 
-**Important**: Using a user with wrong authorizations may result in missing privileges to call APIs but also to situations. Furthermore scenarios might occure, in which leave requests will be approved automatically. Based on our development experiences, we want to share the following findings with you: 
+In this tutorial, a new **super admin user** was created for the technical API communication purpose (for further information see KBA https://launchpad.support.sap.com/#/notes/2186617). Please discuss with your SAP SuccessFactors administrator, as the super admin user approach taken in this tutorial, might not be suitable for a productive scenario. In this case a more restricted API user might be required! 
 
-- If a leave request is created by an API user with **HR Admin privileges** and no workflow is configured for Admin users, the leave request is approved automatically. Please see the following KBA for further information: https://launchpad.support.sap.com/#/notes/0002548343
+In case you're following the **super admin approach** as used in this tutorial, the following additional privileges are required and need to be assigned to your super admin user. The technical user must be allowed to assign the approval task to himself and afterwards approve the task himself. Therefor please create a new **permission role** (if required) and add the following permissions:
 
-- If the selected API user has very powerful privileges on the **MDF OData API**, this can lead to situations in which leave requests are automatically confirmed. This has not been validated yet, but if you're facing situations in which your leave requests (created from SAP Microsoft Teams) are automatically approved, also check the following KBA for further information: https://launchpad.support.sap.com/#/notes/2396714 
+* Manage Workflows > Manage Workflow Assignments
+* Manage Workflows > Manage Workflow Requests
 
->**Hint**: In this tutorial, a new super admin user was created for the API communication purpose (for further information see KBA https://launchpad.support.sap.com/#/notes/2186617). Please discuss with your SAP SuccessFactors administrator, as the super admin user approach taken in this tutorial, might not be suitable for a productive scenario. In this case a more restricted API user might be required! 
+![SFSF](./images/sfsf003.png) 
+
+Add this **permission role** to a new **permission group** (if required) and assign it to your super admin user. 
+
+![SFSF](./images/sfsf006.png) 
+
+
+**Important**: Using a user with wrong authorizations may result in missing privileges to call APIs. Furthermore scenarios might occur, in which leave requests will be approved automatically without a regular workflow process. Based on our tutorial experiences, we want to share the following findings with you: 
+
+- If a leave request is created by an API user with **HR Admin privileges** and no workflow is configured for Admin users, the leave request might be approved automatically. Please see the following KBA for further information: https://launchpad.support.sap.com/#/notes/0002548343
+
+- If the API user has powerful admin privileges on the **MDF OData API**, this can lead to situations in which leave requests are automatically confirmed. This has not been validated yet, but if you're facing situations in which your leave requests are automatically approved, also check the following KBA for further information: https://launchpad.support.sap.com/#/notes/2396714 
 
 <br>
 
