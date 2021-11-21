@@ -6,6 +6,13 @@ This repository contains code samples and step by step instructions
 
 ![Solution Architecture](-/../images/Advance%20Scope.png)
 
+## Updates
+
+* 2021-11-21 - Now the available balances also show the assigned start and end date </br>
+   Please download and deploy the latest Integration Flows & update your SAP CAI bot
+
+   ![Balance Timeframes](-/../images/balancetimeframes.png)
+
 ## Description
 
 **Important**
