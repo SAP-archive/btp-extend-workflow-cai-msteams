@@ -2,11 +2,9 @@
 
 **! Important !**
 
-The SAP Task Center service General Availability is planned for Q4/2021 (subject to change). This mission's primarily purpose is the demonstration of a working end-to-end scenario including the SAP Task Center service. Once the service is available, feel free to try this part of the mission yourself. 
+The SAP Task Center service is available for customers since end of November 2021. This mission's primarily purpose is the demonstration of a working end-to-end scenario including the SAP Task Center service.
 
-Until then, you can already ensure, that you're fulfilling the prerequisites for the SAP Task Center integration. In this case, foremost the connectivity between your IAS & IPS instance and SAP SuccessFactors as well as your SAP BTP subaccount are mission-critical. This requirement has to be fullfilled, before you start the SAP Task Center provisioning. 
-
-Please be aware, that the main challenge of the SAP Task Center provisioning is not the subscription to SAP Task Center service itself, but the correct connectivity between IAS/IPS and your SAP applications like SAP SuccessFactors. This will probably consume most of your time and effort. 
+Please be aware, that the main challenge of the SAP Task Center provisioning is not the subscription to SAP Task Center service itself, but the connectivity between IAS/IPS and your SAP applications like SAP SuccessFactors.
 
 **! Important !**
 
@@ -69,10 +67,10 @@ To create an instance of the SAP Task Center within your SAP BTP subaccount, you
 Further details can also be found in the relevant documentations on the following SAP Help sites. </br>
 
 The SAP Task Center can be easily provisioned into your BTP subaccount be running the available booster. The process is described on the following SAP Help site: </br>
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/3a499676e7ae4282af84092f778e3737.html
 
 In case you prefer a manual configuration within your subaccount, please follow the following documentation: </br>
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/0f00d3d3e2ab460c856d409c469fb4f1.html
 
 </br> 
 
@@ -94,16 +92,15 @@ Some SAP SuccessFactors instances come with a preconfigured IAS/IPS integration.
 The SAP Task Center configuration for SAP SuccessFactors is well described in the following SAP Help documentation. Please be aware, that the documentation is linking to some sub-sites, which need to be read carefully and which you need to processed before you continue with the main documentation. 
 
 [SAP Help] SAP Task Center - SAP SuccessFactors Integration </br>
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/eae23f3a679d481295ff05bdb322f859.html
 
 As described in the documentation, you should stick to the following steps:
 
 3.1 Go through the prerequisites described in the SAP Task Center documentation </br>
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
 
-> Most of the  prerequisites relate to an existing integration between your custom IAS/IPS instance and your SAP SuccessFactors instance.
+> Most of the prerequisites relate to an existing integration between your custom IAS/IPS instance and your SAP SuccessFactors instance.
 
-3.2 Go through the prerequisites described in the relevant "Enabling To-Do Task Integration" documentation linked in step 1. </br>
+3.2 Go through the prerequisites described in the relevant **Enabling To-Do Task Integration** documentation linked in step 3.1. </br>
 https://help.sap.com/viewer/568480cc877d4337992a2cd9792fbfed/2105/en-US/c15f23f6f4e24ddea84d5be8e6b935ae.html 
 
 > Again, an existing IAS/IPS integration is the most important content described in this SAP Help site. You will also find further links to the required documentations, in case you need to setup this integration!
@@ -112,20 +109,21 @@ https://help.sap.com/viewer/568480cc877d4337992a2cd9792fbfed/2105/en-US/c15f23f6
 
 ![TaskCenter](./images/tc100.png)
  
-3.3 Follow the procedure described to activate the **Enhanced To-Do integration**
+3.3 Follow the procedure described to activate the **Enhanced To-Do integration**.
 https://help.sap.com/viewer/568480cc877d4337992a2cd9792fbfed/2105/en-US/c15f23f6f4e24ddea84d5be8e6b935ae.html 
 
 
 3.4 Download the Trust Certificate from the SAP BTP subaccount which you used for the SAP Task Center provisioning. To get your Trust Certificate (which is required to configure the respective OAuth Clients within SAP SuccessFactors) please follow the procedure described on the following SAP Help site:
 
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/eae23f3a679d481295ff05bdb322f859.html
 
 Save the certificate on your local device for later usage. 
 
 3.5 Create the required OAuth Clients in SAP SuccessFactors by logging into your instance as an administrator or an user which is authorized to maintain OAuth Clients. Go to **Admin Center** -> **API Center**  -> **OAuth Configuration for OData** and choose **Register Client Application**. You can also access the tool by searching **Manage OAuth2 Client Applications** in Action Search. 
 
 3.6 Create an OAuth Client used for the primary connection between SAP Task Center and SAP SuccessFactors by using the information described on the second section of the following SAP Help site:
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/dc5407b42c7e435b8124ee7a0816249c.html
 
 > Hints: The Application URL shouldn't have any influence on the functionality so please follow the proposal from the documentation. </br>
 > The Technical User ID needs to be configured as stated in the documentation! </br>
@@ -141,7 +139,8 @@ Copy the API Key of this OAuth Client, once you saved it by clicking on **View**
 
 
 3.7 Create a secondary OAuth Client used for Principal Propagation between SAP Task Center and SPA SuccessFactors by using the information described on the first section of the following SAP Help site:
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/bf657f8adefa4a468aa3c71783fca291.html
 
 > Hints: The Application URL shouldn't have any influence on the functionality so please follow the proposal from the documentation. </br>
 > The certificate required has been downloaded in Step 4 of this documentation. Please make sure to only Copy & Paste the lines **between** -----BEGIN CERTIFICATE----- and -----END CERTIFICATE-----. 
@@ -183,7 +182,7 @@ The SAP Task Center service communicates with your SAP applications like SAP Suc
 
 4.4 Configure the primary destination to SAP SuccessFactors by editing the **Success_Factors** entry (or creating a new destination with this name). The configuration is straight forward and the respective details can be found on the following SAP Help site from section three onward:
 
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/dc5407b42c7e435b8124ee7a0816249c.html
 
 > Hints: Be aware you will require the client credential information now, which you've saved in Step 4.2.
 > You will require the API Key of the first OAuth Client which you've created in SAP SuccessFactors (see Step 3.6). 
@@ -196,7 +195,7 @@ A final configuration of your **Success_Factors** destination could look similar
 
 4.5 Configure the secondary destination to SAP SuccessFactors by editing the **Success_Factors_PP** entry (or creating a new destination with this name). The configuration is straight forward and the respective details can be found on the following SAP Help site from section two onward:
 
-https://help.sap.com/viewer/9112ba33d2aa4109aee34c26adf29cc7/Cloud/en-US (**Public link available soon**)
+https://help.sap.com/viewer/08cbda59b4954e93abb2ec85f1db399d/LATEST/en-US/bf657f8adefa4a468aa3c71783fca291.html
 
 > Hints: Be aware you will require the client credential information now, which you've saved in Step 4.2.
 > You will require the API Key of the first OAuth Client which you've created in SAP SuccessFactors (see Step 3.6). 
@@ -263,7 +262,7 @@ Setting the required user UUID mapping for an SAP SuccessFactors user, can be do
 
 **! Important !**
 
-This process is **NOT** intended for a productive landscape, as the user UUID can only be set once for an SAP SuccessFactors user (as of today). This is why you should only try this within a test oder sandbox environment, in which you assign an UUID to a test user. 
+This process is **NOT** intended for a productive landscape, as the user UUID can only be set once for an SAP SuccessFactors user. Although this behavior will be changed in a future release, as of today you should only try this within a test oder sandbox environment, in which you assign a UUID to a test user. 
 
 **! Important !**
 
@@ -277,7 +276,7 @@ e.g. https://apidemotenant.successfactors.com/rest/scim/Users?filter=userName eq
 
 ![TaskCenter](./images/tc310.png)
 
-7.2 Copy the user id (marked in red) of the previous response body and call another SCIM API endpoint to update the user UUID of this user. Please keep in mind, this can only be done once for a specific user (as of today)! Once set, the user UUID cannot be changed anymore. It is planned to change this behaviour in the future, so the user UUID can be updated whenever necessary within SAP SuccessFactors. 
+7.2 Copy the user id (marked in red) of the previous response body and call another SCIM API endpoint to update the user UUID of this user. Please keep in mind, this can only be done once for a specific user (as of today)! Once set, the user UUID cannot be changed anymore. This behaviour will change in a future release, so the user UUID can be updated whenever necessary within SAP SuccessFactors. 
 
 **PATCH**</br>
 https://&lt;SuccessFactors API endpoint&gt;.successfactors.com/rest/scim/Users/&lt;userid from step 7.2&gt; </br>
