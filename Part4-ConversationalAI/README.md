@@ -84,9 +84,11 @@ Let's adjust the forked bot to your needs and connect it to your instance of SAP
 
 2.3 Open the [BTP Cockpit](https://cockpit.eu10.hana.ondemand.com/cockpit) in a new browser tab and navigate to **Instances and Subscriptions** in your development subaccount. Make sure you're using the subaccount in which also your SAP Cloud Integration instance is running.  
 
-2.4 Find the Process Integration Runtime service instance **integration-flow** and click on **keys** to get the credentials.  
+2.4 Find your Process Integration Runtime service instance like (in our case called **integration-flow**) and click on **keys** to open the service keys. If there is no service key yet, create a new service key by selecting the service instance, clicking on **Create** within the **Service Keys** section and naming the new service key e.g. **cai**.
 
 ![CAI WF service instance](./images/cai_wf_service_instance.png)
+
+If there is no instance of the Process Integration Runtime yet, you probably did not use the Booster for setting up your SAP Integration Suite tenant. Please check the following Tutorial [(click here)](https://developers.sap.com/tutorials/cp-starter-isuite-onboard-subscribe.html) or SAP Help [(click here)](https://help.sap.com/viewer/368c481cd6954bdfa5d0435479fd4eaf/Cloud/en-US/302b47b11e1749c3aa9478f4123fc216.html) to learn how to setup this type of required service instance. 
 
    > Here you can find all necessary credentials *(url, tokenurl, clientid, clientsecret)* that are needed for the next step. Keep this tab open to make it easy to copy&paste the values. 
 
