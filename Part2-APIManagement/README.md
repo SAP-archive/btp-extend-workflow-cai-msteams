@@ -34,9 +34,11 @@ By default all SAP Cloud Integration APIs which we prepared for this scenario ar
 
 ![SFSF](./images/apimng017.png) 
 
-1.8 Find the service instance of the Process Integration Runtime (it-rt) and open the default service key. Click on "View" from **Actions**
+1.8 Find the service instance of the Process Integration Runtime (it-rt) and open the default service key. Click on "View" from **Actions**. If there is no service key yet, create a new service key by clicking **Create** and naming the new service key e.g. **defaultKey**
 
 ![SFSF](./images/apimng018.png) 
+
+If there is no instance of the Process Integration Runtime yet, you probably did not use the Booster for setting up your SAP Integration Suite tenant. Please check the following Tutorial [(click here)](https://developers.sap.com/tutorials/cp-starter-isuite-onboard-subscribe.html) or SAP Help [(click here)](https://help.sap.com/viewer/368c481cd6954bdfa5d0435479fd4eaf/Cloud/en-US/302b47b11e1749c3aa9478f4123fc216.html) to learn how to setup this type of required service instance. 
 
 1.9 Note down the **clientid**, **clientsecret**, **url** and **tokenurl** which is required for the next step
 
