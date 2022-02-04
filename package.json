@@ -1,0 +1,56 @@
+{
+    "name": "teams-sfsf-leave-request",
+    "version": "1.0.0",
+    "description": "SAP SuccessFactors Leave Request",
+    "author": "SAP",
+    "license": "Apache License 2.0",
+    "main": "index.js",
+    "type": "module",
+    "engines": {
+        "node": "^14",
+        "npm": "^6"
+    },
+    "scripts": {
+        "start": "node ./index.js",
+        "watch": "nodemon ./index.js",
+        "lint": "eslint .",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "server": "npm install && cd client && npm install && npm run build && cd ../ && node ./index.js",
+        "client": "cd client && npm install && npm run start",
+        "build-client": "cd client && npm install && npm run build",
+        "copy-client": "npx rimraf ./server/client/ && npx copyfiles -u 1 \"./client/build/**/*\" , ./server/client/",
+        "manifest": "del \"teamsAppManifest\\manifest.zip\" 2> nul && powershell Compress-Archive teamsAppManifest/* teamsAppManifest/manifest.zip",
+        "push": "cf push -f ./deploy/manifest.yml --vars-file ./deploy/vars.yml",
+        "build-push": "npm run build-client && npm run copy-client && npm run push"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SAP-samples/btp-extend-workflow-cai-msteams/tree/full-scope"
+    },
+    "dependencies": {
+        "@microsoft/microsoft-graph-client": "^2.2.1",
+        "@sap/xsenv": "^3.2.0",
+        "@sap/xssec": "^3.2.12",
+        "axios": "^0.25.0",
+        "botbuilder": "^4.15.0",
+        "botbuilder-azure-blobs": "^4.15.0",
+        "botbuilder-dialogs": "^4.15.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.2",
+        "isomorphic-fetch": "^3.0.0",
+        "passport": "^0.5.2",
+        "passport-azure-ad": "^4.3.1",
+        "qs": "^6.10.3",
+        "querystring": "^0.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.0.0",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "nodemon": "^2.0.4"
+    }
+}

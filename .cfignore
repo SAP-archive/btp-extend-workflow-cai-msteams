@@ -1,0 +1,15 @@
+/.vscode/
+/.git/
+
+/client/
+/cloudIntegration/
+/node_modules/
+/deploy/
+/teamsAppManifest/
+
+.env
+.gitignore
+package-lock.json
+xs-security.json
+README.md
+LICENSE

@@ -1,0 +1,96 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.9/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.9",
+    "version": "1.0.0",
+    "id": "<msteamsappguid-placeholder>",
+    "packageName": "com.sap.sfsf.leaverequest",
+    "developer": {
+        "name": "SAP",
+        "websiteUrl": "https://www.sap.com",
+        "privacyUrl": "https://www.sap.com",
+        "termsOfUseUrl": "https://www.sap.com"
+    },
+    "name": {
+        "short": "SAP SuccessFactors",
+        "full": "SAP SuccessFactors"
+    },
+    "description": {
+        "short": "SAP SuccessFactors Leave Request",
+        "full": "SAP SuccessFactors Leave Request"
+    },
+    "icons": {
+        "color": "icon-color.png",
+        "outline": "icon-outline.png"
+    },
+    "accentColor": "#FDA402",
+    "staticTabs": [{
+        "entityId": "com.sap.sfsf.tab.leaverequest",
+        "name": "Leave Request",
+        "contentBotId": "<msappid-placeholder>",
+        "scopes": [
+            "personal"
+        ]
+    }],
+    "bots": [
+        {
+            "botId": "<msappid-placeholder>",
+            "isNotificationOnly": false,
+            "supportsFiles": false,
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "composeExtensions": [
+        {
+            "botId": "<msappid-placeholder>",
+            "canUpdateConfiguration": true,
+            "commands": [
+                {
+                    "id": "LEAVEREQUEST",
+                    "type": "action",
+                    "title": "Leave Request",
+                    "description": "Leave Request",
+                    "initialRun": false,
+                    "fetchTask": true,
+                    "context": [
+                        "compose"
+                    ]
+                },
+                {
+                    "id": "SignOutCommand",
+                    "type": "action",
+                    "title": "Sign Out",
+                    "description": "Sign out from authenticated services.",
+                    "initialRun": false,
+                    "fetchTask": true,
+                    "context": [
+                        "compose"
+                    ]
+                }
+            ],
+            "messageHandlers": [
+                {
+                "type": "link",
+                "value": {
+                    "domains": [
+                        "*.botframework.com",
+                        "*.hana.ondemand.com"
+                    ]
+                }
+            }
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "*.botframework.com",
+        "*.hana.ondemand.com"
+    ],
+    "webApplicationInfo": {
+        "id": "<msappid-placeholder>",
+        "resource": "api://<domain-placeholder>/botid-<msappid-placeholder>"
+    }
+}

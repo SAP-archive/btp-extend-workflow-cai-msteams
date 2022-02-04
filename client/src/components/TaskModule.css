@@ -1,0 +1,64 @@
+.container {
+    background-color: #fff;
+    overflow: overlay;
+}
+
+.content-login {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    height: calc(100vh - 4.5rem);
+}
+
+.content-message {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    height: calc(100vh - 3rem);
+    margin: 1rem;
+}
+.content-loader {
+    height: 100vh;
+}
+
+.content-form {
+    max-height: calc(100vh - 4.5rem);
+    min-width: 100vw;
+    padding: 2rem;
+}
+
+.button-group {
+    display: flex; 
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+
+.button-group-center {
+    display: flex; 
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.form-element {
+    margin-bottom: 0.75rem;
+}
+
+.label {
+    display: 'block';
+    margin-bottom: 0.25rem;
+}
+
+.input-field {
+    margin-bottom: 0.25rem;
+}
+
+.question-container {
+    display: 'block';
+    margin-bottom: 0.25rem;
+}
+
+.question-editable-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
