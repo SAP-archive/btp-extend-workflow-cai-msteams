@@ -3,7 +3,7 @@
 
 # Extend your business workflows with Microsoft Teams (Full Scope)
 
-![architecture](./images/architecture_teams_sfsf.png)
+![architecture](./images/Full-Scope.png)
 
 
 ## Description
