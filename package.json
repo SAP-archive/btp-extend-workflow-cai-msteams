@@ -18,10 +18,9 @@
         "server": "npm install && cd client && npm install && npm run build && cd ../ && node ./index.js",
         "client": "cd client && npm install && npm run start",
         "build-client": "cd client && npm install && npm run build",
-        "copy-client": "npx rimraf ./server/client/ && npx copyfiles -u 1 \"./client/build/**/*\" , ./server/client/",
         "manifest": "del \"teamsAppManifest\\manifest.zip\" 2> nul && powershell Compress-Archive teamsAppManifest/* teamsAppManifest/manifest.zip",
         "push": "cf push -f ./deploy/manifest.yml --vars-file ./deploy/vars.yml",
-        "build-push": "npm run build-client && npm run copy-client && npm run push"
+        "build-push": "npm run build-client && npm run push"
     },
     "repository": {
         "type": "git",

@@ -1,15 +1,11 @@
-/.vscode/
-/.git/
+/*
+!/server
+!/client/build
 
-/client/
-/cloudIntegration/
-/node_modules/
-/deploy/
-/teamsAppManifest/
+!/index.js
+!/loadEnv.js
+!/package.json
 
-.env
-.gitignore
-package-lock.json
-xs-security.json
-README.md
-LICENSE
+!/README.md
+!/.gitignore
+!/.cfignore
