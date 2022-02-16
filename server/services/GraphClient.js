@@ -10,7 +10,6 @@ import { Client } from '@microsoft/microsoft-graph-client';
 import "isomorphic-fetch";
 import axios from 'axios';
 
-
 class GraphClient {
     constructor(token) {
         if (!token || !token.trim()) {
@@ -33,7 +32,7 @@ class GraphClient {
         try {
             return await this.graphClient.api('/me').get();
         } catch (error) {
-            return {};
+            return error;
         }
     }
 
@@ -48,17 +47,18 @@ class GraphClient {
             }
         };
 
-        const response = await fetch(graphPhotoEndpoint, graphRequestParams).catch(this.unhandledFetchError);
+        const response = await fetch(graphPhotoEndpoint, graphRequestParams);
 
         if (!response || !response.ok) {
             console.error('User Image Not Found!!');
             // Return a Sample Image
             return 'https://adaptivecards.io/content/cats/1.png';
         }
-        const imageBuffer = await response.arrayBuffer().catch(this.unhandledFetchError); // Get image data as raw binary data
+        const imageBuffer = await response.arrayBuffer(); // Get image data as raw binary data
         
         // Convert binary data to an image URL and set the url in state
         const imageUri = 'data:image/png;base64,' + Buffer.from(imageBuffer).toString('base64');
+
         return imageUri;
     }
     
@@ -66,26 +66,30 @@ class GraphClient {
     // Get profile details of an Azure AD user via userId (email or graph user id)
     async getUserProfile(userId) {
         return new Promise(async (resolve, reject) => {
-            await axios.get('https://graph.microsoft.com/v1.0/users/' + userId, {
-                headers: {
-                    'Content-type': 'application/json',
-                    'Authorization': 'bearer ' + this._token
-                }
-            }).then((response) => {
-                    resolve({
-                        teamsId: response.data.id,
-                        fullName: response.data.displayName,
-                        mail: response.data.mail,
-                        title: response.data.jobTitle
-                    });
-                })
-                .catch((error) => {
-                    if (error.response.status == 404) {
-                        resolve(null);
-                    } else {
-                        reject(error);
+            try {
+                await axios.get('https://graph.microsoft.com/v1.0/users/' + userId, {
+                    headers: {
+                        'Content-type': 'application/json',
+                        'Authorization': 'bearer ' + this._token
                     }
-                });
+                }).then((response) => {
+                        resolve({
+                            teamsId: response.data.id,
+                            fullName: response.data.displayName,
+                            mail: response.data.mail,
+                            title: response.data.jobTitle
+                        });
+                    })
+                    .catch((error) => {
+                        if (error.response.status == 404) {
+                            resolve(null);
+                        } else {
+                            reject(error);
+                        }
+                    });
+            } catch (err) {
+                reject(error);
+            }
         });
     }
 
@@ -101,16 +105,16 @@ class GraphClient {
             }
         };
 
-        const response = await fetch(graphPhotoEndpoint, graphRequestParams).catch(this.unhandledFetchError);
+        const response = await fetch(graphPhotoEndpoint, graphRequestParams);
 
         if (!response || !response.ok) {
             console.error('User Image Not Found!!');
             // Return a Sample Image
-            return '';
+            return 'https://adaptivecards.io/content/cats/1.png';
         }
         
         // Get image data as raw binary data
-        const imageBuffer = await response.arrayBuffer().catch(this.unhandledFetchError);
+        const imageBuffer = await response.arrayBuffer();
         
         // Convert binary data to an image URL and set the url in state
         const imageUri = 'data:image/png;base64,' + Buffer.from(imageBuffer).toString('base64');

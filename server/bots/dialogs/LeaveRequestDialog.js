@@ -276,8 +276,7 @@ class LeaveRequestDialog extends CancelAndHelpDialog {
         if(!timeBalance.balanceUnlimited){
             // Convert single return balance object to array for unified handling
             // If user has open balances for multiple years, an array is returned, in case of one year an object is returned
-            timeBalance.TimeAccountBalance = timeBalance.TimeAccountBalance instanceof Object ? [timeBalance.TimeAccountBalance] : timeBalance.TimeAccountBalance;
-
+            timeBalance.TimeAccountBalance = timeBalance.TimeAccountBalance instanceof Array ? timeBalance.TimeAccountBalance : [timeBalance.TimeAccountBalance];
             // Convert time balances to required format for display on adpative card
             timeBalance = timeBalance.TimeAccountBalance.map( balance => {
                 let startDate = new Date(balance.bookingStartDate);
@@ -289,6 +288,8 @@ class LeaveRequestDialog extends CancelAndHelpDialog {
                     "value" : startDate.toLocaleDateString(undefined, options) + " - " + endDate.toLocaleDateString(undefined, options)
                 }
             });
+
+            
         }else{
             timeBalance = [{
                 "title" : `Unlimited Balance`,

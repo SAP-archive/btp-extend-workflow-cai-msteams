@@ -77,7 +77,7 @@
                     "value": {
                         "domains": [
                             "*.botframework.com",
-                            "*.hana.ondemand.com"
+                            "<domain-placeholder>"
                         ]
                     }
                 }
@@ -90,7 +90,7 @@
     ],
     "validDomains": [
         "*.botframework.com",
-        "*.hana.ondemand.com"
+        "<domain-placeholder>"
     ],
     "webApplicationInfo": {
         "id": "<msappid-placeholder>",

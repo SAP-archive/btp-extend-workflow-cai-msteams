@@ -58,7 +58,7 @@ This repository contains code samples for a native Microsoft Teams application, 
 
 This project has been implemented based on the following Microsoft BotBuilder and Microsoft Office Developer sample repositories. 
 - https://github.com/microsoft/BotBuilder-Samples/tree/main/samples/typescript_nodejs/13.core-bot
-- https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs/client
+- https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs
 
 Another source of inspiration is the following blog post series by Martin Raepple, in which a Microsoft Teams extension for SAP S/4HANA is developed. 
 - https://blogs.sap.com/2020/07/17/principal-propagation-in-a-multi-cloud-solution-between-microsoft-azure-and-sap-cloud-platform-scp/

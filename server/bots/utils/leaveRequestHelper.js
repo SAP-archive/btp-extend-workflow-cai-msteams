@@ -128,9 +128,9 @@ const getLeaveRequestFormCard = async (activityData, btpToken) => {
    // be a hint that the balance for the selected time type is unlimited. 
    if(!timeBalance.balanceUnlimited){
         // Convert single return balance object to array for unified handling
-        timeBalance.TimeAccountBalance = timeBalance.TimeAccountBalance instanceof Object 
-                                        ? [timeBalance.TimeAccountBalance] 
-                                        :   timeBalance.TimeAccountBalance;
+        timeBalance.TimeAccountBalance = timeBalance.TimeAccountBalance instanceof Array 
+                                        ? timeBalance.TimeAccountBalance 
+                                        : [timeBalance.TimeAccountBalance];
 
         timeBalance = timeBalance.TimeAccountBalance.map( balance => {
             let startDate = new Date(balance.bookingStartDate);

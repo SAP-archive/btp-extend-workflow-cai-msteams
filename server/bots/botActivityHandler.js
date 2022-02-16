@@ -734,7 +734,7 @@ class BotActivityHandler extends TeamsActivityHandler {
 
         return {
             tab: {
-                type: "silentAuth",
+                type: "auth",
                 suggestedActions: {
                     actions: [
                         {
