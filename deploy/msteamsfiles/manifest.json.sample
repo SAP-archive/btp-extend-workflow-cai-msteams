@@ -23,14 +23,16 @@
         "outline": "icon-outline.png"
     },
     "accentColor": "#FDA402",
-    "staticTabs": [{
-        "entityId": "com.sap.sfsf.tab.leaverequest",
-        "name": "Leave Request",
-        "contentBotId": "<msappid-placeholder>",
-        "scopes": [
-            "personal"
-        ]
-    }],
+    "staticTabs": [
+        {
+            "entityId": "com.sap.sfsf.tab.leaverequest",
+            "name": "Leave Request",
+            "contentBotId": "<msappid-placeholder>",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
     "bots": [
         {
             "botId": "<msappid-placeholder>",
@@ -71,14 +73,15 @@
             ],
             "messageHandlers": [
                 {
-                "type": "link",
-                "value": {
-                    "domains": [
-                        "*.botframework.com",
-                        "*.hana.ondemand.com"
-                    ]
+                    "type": "link",
+                    "value": {
+                        "domains": [
+                            "*.botframework.com",
+                            "*.hana.ondemand.com"
+                        ]
+                    }
                 }
-            }
+            ]
         }
     ],
     "permissions": [
