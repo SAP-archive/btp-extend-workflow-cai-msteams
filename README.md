@@ -13,10 +13,10 @@
 This repository contains code samples for a native Microsoft Teams application, extending SAP SuccessFactors Time Off / Leave Request workflows. The detailed instructions on how to implement this sample application will be published in a blog post series following the below steps. 
 
 1.	Preface and scenario introduction [(click here)](https://blogs.sap.com/2022/02/03/sap-ms-teams-1-preface-and-scenario-introduction)
-2.	Target application features (available soon)
+2.	Target application features [(click here)](https://blogs.sap.com/2022/02/08/sap-ms-teams-2-target-application-features/)
     - What to expect once you implemented all blog posts
     - Samples of the Microsoft Teams extension application
-3.	Requirements and application architecture (available soon)
+3.	Requirements and application architecture [(click here)](https://blogs.sap.com/2022/02/10/sap-ms-teams-3-requirements-and-application-architecture/)
     - Check the availability of this scenario’s system requirements
         - SAP SuccessFactors instance
         - SAP Business Technology Platform services
@@ -25,34 +25,34 @@ This repository contains code samples for a native Microsoft Teams application, 
         - Communication from Microsoft Teams to SAP SuccessFactors
         - Communication from SAP SuccessFactors to Microsoft Teams
         - Security aspects of the architecture design
-4.	SAP BTP subaccount configuration and test users (available soon)    
+4.	SAP BTP subaccount configuration and test users [(click here)](https://blogs.sap.com/2022/02/10/sap-ms-teams-3-requirements-and-application-architecture/)   
     - Set up your SAP Integration Suite for integration capabilities
     - Create a Process Integration Runtime instance for API access
     - Configure a XSUAA instance to handle security
     - Set up trust between Azure Active Directory and SAP BTP
     - Create test users in Azure Active Directory
-5.	SAP SuccessFactors instance setup (available soon)
+5.	SAP SuccessFactors instance setup [(click here)](https://blogs.sap.com/2022/02/17/sap-ms-teams-5-sap-successfactors-instance-setup/)
     - Set up OAuth2 clients for Principal Propagation and technical API access
     - Configure the Intelligent Services Center for notification handling
-6.	Set up your SAP Cloud Integration instance (available soon)
+6.	Set up your SAP Cloud Integration instance [(click here)](https://blogs.sap.com/2022/02/22/sap-ms-teams-6-set-up-your-sap-cloud-integration-instance/)
     - Configure your security settings for Principal Propagation 
     - Provide your security settings for technical API access
     - Setup the security details for notification handling
     - Upload and deploy the integration flows
-7.	Get your Microsoft Azure settings ready (available soon)
+7.	Get your Microsoft Azure settings ready [(click here)](https://blogs.sap.com/2022/02/28/sap-ms-teams-7-get-your-microsoft-azure-settings-ready/)
     - Configure a new application registration for your extension application
     - Integrate your application with the SAP BTP enterprise application
     - Configure a Bot Service instance for your extension application
     - Create a Storage Account to store bot related data
-8.	Deploy your Microsoft Teams extension (available soon)
+8.	Deploy your Microsoft Teams extension [(click here)](https://blogs.sap.com/2022/03/01/sap-ms-teams-8-deploy-your-microsoft-teams-extension/)
     - Maintain the extension app details in the manifest file
     - Provide the environment variables of your landscape
     - Deploy the extension application to SAP BTP
     - Upload the application manifest file to Microsoft Teams
-9.	Solution limitations and further topics (available soon)
-    - Limitations of the current solution approach
-    - How to access On-Premise systems like SAP S/4HANA
-    - Possible enhancement scenarios
+9.	Improvement ideas and further topics [(click here)](https://blogs.sap.com/2022/03/15/sap-ms-teams-9-improvement-ideas-and-further-topics/)
+    - Access on-premise systems like SAP S/4HANA
+    - Scope of the current solution approach
+    - Other enhancement scenarios
 
 ## Good to know
 
