@@ -103,9 +103,11 @@ Adaptive Cards can render an incoming message and also allow the user to perform
 
 To enable and publish actionable messages, we need to register a new provider in **Actionable Email Developer Dashboard**
 
+**Important** - If you followed the Basic Scope of this scenario, you've already created a **Microsoft365 Developer** account. Feel free to reuse this account as described in the following steps. If you joined this scenario for the Advanced Scope only, please be aware that in this case also a so called **Microsoft Teams Exploratory** license is sufficient. This 12 months free trial license gives you access to Microsoft Teams but also to other required Micrsoft Office features used in the following part of the tutorial. You can find more information about how to assign a Microsoft Teams Exploratory license in part five of this project. 
+
 ---
 
-2.1 Go to the [Actionable Email Developer Dashboard](https://outlook.office.com/connectors/oam/publish) and logon with your **Microsoft365 Developer account**. 
+2.1 Go to the [Actionable Email Developer Dashboard](https://outlook.office.com/connectors/oam/publish) and logon with your **Microsoft365 Developer account** (in case you're using a separate Microsoft365 Developer account) or your **Azure Active Directory account** (in case you're making use of the Microsoft Teams Exploratory license). 
 
 2.2 Create a **New Provider**. 
 
@@ -140,6 +142,10 @@ https://ff149380trial-trial.integrationsuitetrial-apim.eu10.hana.ondemand.com/ff
 > **IMPORTANT:** In this scenario, the sender and receiver of the actionable messages is your Microsoft365 Developer account. Make sure that at least the managers e-mail address is part of the test user list. 
 
 ![Test user](./images/apimng0027.png)
+
+> **IMPORTANT:** Changing the list of receipients might take up to one hour to take effect! 
+
+![Test user](./images/apimng0027a.png)
 
 2.8 As a result you should see your new registered Provider with the status **Approved**. 
 
@@ -205,5 +211,13 @@ https://ff149380trial-trial.integrationsuitetrial-apim.eu10.hana.ondemand.com/ff
 3.13 Provide the Name: **SMTP_SERVER** , user and password of the SMTP server and press **Deploy**
 
 ![Deploy usercredential](./images/apimng0314.png)
+
+> If using the Microsoft SMTP features, the credentials (e-mail and password) should be equal to your Office365 user or your Azure Active Directory user credentials.  
+
+3.14  If using the Microsoft SMTP features, also make sure that the user which you're using for this SMTP credential configuration is also enabled for **Authenticated SMTP** access. This can be done via the Microsoft 365 admin center (https://admin.microsoft.com/#/homepage). For more information see the official [Microsoft documentation](https://docs.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/authenticated-client-smtp-submission.) 
+
+![Microsoft 365 admin center](./images/apimng0315.png)
+
+![Authenticated SMTP access](./images/apimng0316.png)
 
 You successfully configured the API Management and Adaptive Cards.

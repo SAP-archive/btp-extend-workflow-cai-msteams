@@ -4,7 +4,7 @@ To be able to use your SAP Conversational AI Bot within Microsoft Teams, you wil
 
 </br>
 
-### Step 1 - Microsoft Azure & Microsoft365 Developer account
+### Step 1 - Microsoft Azure & Microsoft Teams license
 
 1.1 Create a Microsoft Azure (trial) account
 
@@ -12,21 +12,31 @@ This step of the tutorial requires an active **Microsoft Azure** account. In cas
 
 [Setup Free Microsoft Azure Account](https://github.com/SAP-samples/btp-extend-workflow-cai-msteams/blob/basic-scope/Part0/README.md)
 
-1.2 Create a Microsoft365 Developer account
+1.2 Get a Microsoft Teams license
 
-Please make sure, you're also subscribing to a **Microsoft365 Developer account** and add a respective Microsoft Office365 user to your **Azure AD**. This user will be required in a later step of this tutorial to test your chatbot within Microsoft Teams. The process is also described in the **Basic scope** of this scenario. In case you're using an entprise Microsoft Azure subscription, make sure you also comply with this requirement. 
+To use Microsoft Teams, a license is required. If you don't have a Microsoft Teams license yet, you can get it by either subscribing to an additional free **Microsoft365 Developer** acccount or by adding a suitable **Microsoft Teams license** to your Azure Active Directory. If you're eligible for the **Microsoft Teams Exploratory** license, you can add this license to your Azure Active Directory, by following the steps described below.
+
+**Microsoft365 Developer acccount license**
+
+If you subscribed to a **Microsoft365 Developer account**, please add the respective Microsoft Office365 user to your **Azure AD**. This user will be required in a later step of this tutorial to test your chatbot within Microsoft Teams. The process is also described in the **Basic scope** of this scenario. 
 
 [Setup Microsoft365 Developer Account](https://github.com/SAP-samples/btp-extend-workflow-cai-msteams/blob/basic-scope/Part0/README.md#step-4---create-a-microsoft365-developer-account)
 
-**IMPORTANT:** For successfull testing, you need to ensure, that your Microsoft365 user which you are using for testing purposes, needs to have the same e-mail address as your dedicated SAP SuccessFactors user. Otherwise a mapping between Microsoft and SAP environment is not possible! 
+**Azure Active Directory license**
+
+If you want to allow all of your Azure Active Directory users to make use of the chat bot within Microsoft Teams, you can add a respective license directly to Azure Active Directory. This can e.g. be the **Microsoft Teams Exploratory** license, which is a free trial license (usable for 12 months), allowing you to use Microsoft Teams and other Office365 features with your Active Directory users. You can find details on how to add the Microsoft Teams Exploratory License to your Azure Active Directory at the end of this unit. 
+
+[Setup the Microsoft Teams Exploratory License](#1---add-a-microsoft-teams-exploratory-license)
+
+**IMPORTANT:** For successfull testing, you need to ensure, that the test-users, have the same e-mail address as your dedicated SAP SuccessFactors users. Otherwise a mapping between Microsoft and SAP environment is not possible! This applies for the usage of a Microsoft365 Developer account as well as the standalone usage of Azure Active Directory. 
 
 <br>
 
-### Step 2 - Login to your Microsoft Azure (trial) account
+### Step 2 - Login to your Microsoft Azure account
 
-2.1 Login to [Microsoft Azure Portal](https://portal.azure.com/#home) with your personal **Azure AD** (trial) user. 
+2.1 Login to [Microsoft Azure Portal](https://portal.azure.com/#home) with your **Azure Active Directory** administrator user which was created when you set up your Microsoft Azure (trial) account. 
 
-2.2 In case you're using an Azure trial environment - Please make sure, you're within the **Default Directory** created with your Azure trial account.
+2.2 In case you're using an Azure trial environment - Please make sure, you're within the **Default Directory** created with your Azure (trial) account.
 
 ![MSAzureBot](./images/mab005.png)
 
@@ -147,3 +157,45 @@ You have sucessfully created your first Azure bot channel.
 6.4 You can now have a conversation with the Chatbot within Microsoft Teams. 
 
 ![MSAzureBot](./images/mab200.png)
+
+
+## Additional topics
+
+### 1 - Add a Microsoft Teams Exploratory license
+
+To use Microsoft Teams, you must assign an appropriate license to your Azure Active Directory users. Therefore, you can e.g. use the **Microsoft Teams Exploratory** license for testing purposes. You can find more information and eligibility requirements to use this free license in the official Microsoft documentation [click here](https://docs.microsoft.com/en-us/microsoftteams/teams-exploratory).
+
+In the following, I will explain you how to activate this license for your own Azure Active Directory (if eligible). If you’ve already got an existing Microsoft Teams license, make sure you assign it to your test users accordingly.
+
+1.1 The Microsoft Teams Exploratory license can usually be **self-assigned** by one of your Azure Active Directory users. To do so, one of your Active Directory users must login to Microsoft Teams using e.g., the Microsoft Teams Web client [click here](https://teams.microsoft.com/).
+
+1.2 Once the first user tries to use Microsoft Teams using its Azure Active Directory credentials, the following message will appear. Checking the URL, you can see that a license for Microsoft Teams is missing and whether or not, you’re **eligible for a trial license**.
+
+![Missing license information](./images/mab210.png)
+
+1.3 Click on **Sign up for Teams** to get more information on available Microsoft Teams licenses. Meanwhile and if eligible, in the background, the assignment of the Exploratory license should start automatically. If the assignment does not happen automatically, please check the documentation to make sure you haven't missed any prerequisites. 
+
+1.4 **Wait a few seconds** before reloading the current page. You should now be able to login to Microsoft Teams with the same user that triggered to automated license assignment. If not, please logout and login again.
+
+> At the same time, the Active Directory administrators will receive an e-mail information, that the Exploratory license has been activated for the organization.
+
+![license information](./images/mab220.png)
+
+1.5 Once the **Exploratory license** is activated for your organization, you can assign it to other users in the Azure Portal. Therefore, login as a (user) administrator to your Azure Active Directory (https://portal.azure.com/).
+
+1.6 Select the user you want to assign the Microsoft Teams Exploratory license and switch to the **Licenses** sub-menu to start an assignment.
+
+> Depending on your Azure Active Directory subscription type this should also be possible via a user group license assignment [click here](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-licensing-whatis-azure-portal). In a free Active Directory please assign the license to each test user manually.
+
+![license assignment](./images/mab230.png)
+
+1.7 You can now assign the Microsoft Teams Exploratory license to your user. In our development landscape, we disabled the Exchange Online feature. Click on **Save** to apply the changes.
+
+![license options](./images/mab240.png)
+
+1.8 If you’re facing an error messages concerning the **location** in the previous step, make sure your user is assigned to a **usage location** in its Active Directory profile.
+
+![usage location](./images/mab250.png)
+
+1.9 All Microsoft Teams Exploratory license users should now be able to access Microsoft Teams using the Web or Desktop client. If not, try to logout and login again. That should refresh your permissions.
+

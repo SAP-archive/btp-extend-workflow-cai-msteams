@@ -2,7 +2,7 @@
 
 # Extend your business workflow with Microsoft Teams and Outlook (Advance Scope)
 
-This repository contains code samples and step by step instructions 
+This repository contains code samples and step by step instructions.
 
 ![Solution Architecture](-/../images/Advance%20Scope.png)
 
@@ -18,10 +18,10 @@ This repository contains code samples and step by step instructions
 **Important**
 The advanced scope of this scenario requires **advanced knowledge** in related environments like (SAP Business Technology Platform, Microsoft Azure, SAP SuccessFactors, SAP Conversational AI). Basic requirements for this scope will not be described in detail anymore (like how to subscribe to SAP Integration Suite). Please find respective descriptions (if required), in the Basic scope or by searching for relevant **SAP Help / SAP Blog / SAP Community** pages. 
 
-
 The Objective of the advanced scope is similar to basic scope and the idea is to extend productivity beyond SAP ecosystem by using Microsoft Teams and Microsoft Outlook as engagement channels. In advanced scope instead of using the custom Java application and SAP Workflow Management we are demonstrating how to connect SAP SuccessFactors system for requesting the time off by using SAP Cloud Integration as an integration layer.
 
 This mission requires you to have access to a SAP SuccessFactors system. This includes administrative privileges to define settings like OAuth clients or to assign test users the relevant privileges to access OData APIs. This mission was created based on an SAP SuccessFactors Salesdemo environment instance. A productive landscape might differ in configuration options.
+
 
 1. [SAP Cloud Integration ](./Part1-CloudIntegration/README.md)
    - Import the required Cloud Integration Flows
@@ -42,7 +42,7 @@ This mission requires you to have access to a SAP SuccessFactors system. This in
    - Load your custom time type entities from SAP SuccessFactors 
 
 5. [Microsoft Azure Bot](./Part5-MSAzureBot/README.md)
-   - Create an Azure trial and Microsoft365 account
+   - Required Azure trial account and Microsoft Teams license
    - Create an Microsoft Azure Bot Channel instance
    - Configure the Conversational AI - Microsoft Azure integration
 
